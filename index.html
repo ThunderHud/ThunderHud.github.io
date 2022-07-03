@@ -71,6 +71,44 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-docker安装脚本" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/03/docker%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC/" class="article-date">
+  <time class="dt-published" datetime="2022-07-02T17:21:39.000Z" itemprop="datePublished">2022-07-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/03/docker%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC/">docker安装脚本</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/03/docker%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC/" data-id="cl54pq6ej00007iwb0nvn5mxh" data-title="docker安装脚本" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-博客搭建" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="article-date">
@@ -94,34 +132,102 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h3 id="hexo博客搭建"><a href="#hexo博客搭建" class="headerlink" title="hexo博客搭建"></a>hexo博客搭建</h3><p><strong>注：以下操作都根据 BiliBili 视频博主codesheep的hexo博客搭建视频进行操作。</strong></p>
+<p>所用到的指令 </p>
+<p>hexo new “xxx”     创建一个新的文章</p>
+<ul>
+<li>文章标题可以在对应 md 文件里修改，新建时标题可以写的简单些。</li>
+</ul>
+<p>hexo g #生成网站静态文件到默认设置的 public 文件夹</p>
+<ul>
+<li>便于查看网站生成的静态文件或者手动部署网站。</li>
+<li>如果使用自动部署，不需要先执行该命令。</li>
+<li>hexo g 是 hexo generate 的缩写，命令效果一样。</li>
+</ul>
+<p>hexo d #生成网站静态文件，并部署到指定仓库</p>
+<ul>
+<li>hexo d 时 hexo deploy 的缩写，命令效果一致。</li>
+</ul>
+<p>hexo s #启动博客</p>
+<ul>
+<li>hexo s 是 hexo server 的缩写，命令效果一致。</li>
+<li>预览的同时可以修改文章内容或主题代码，保存后刷新页面即可。</li>
+<li>对 Hexo 根目录 _config.yml 的修改，需要重启本地服务器后才能预览效果。</li>
+</ul>
+<p>hexo clean #清楚缓存文件 db.json 和已生成的静态文件 public 。</p>
+<ul>
+<li>网站显示异常时可以执行这条命令试试。</li>
+</ul>
+<p>hexo new page xxx #新建一个标题为 xxx 的页面，默认链接地址为 主页地址&#x2F;xxx&#x2F;  例如：ip&#x2F;aboutme&#x2F;</p>
+<ul>
+<li>标题可以为中文，但一般习惯用英文。</li>
+<li>页面标题和文章一样可以随意修改。</li>
+<li>页面不会出现在首页文章列表和归档中，夜不支持设置分类标签。</li>
+</ul>
 <ol>
 <li>下载node.js 官网下载npm包</li>
 </ol>
-<p>node -v #查看是否安装成功，查看版本号</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v #查看是否安装成功，查看版本号</span><br></pre></td></tr></table></figure>
+
+
+
 <ol start="2">
 <li>下载淘宝镜像，加速下载。</li>
 </ol>
-<p>npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>cnpm -v #查看是否安装成功，查看版本号</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">cnpm -v #查看是否安装成功，查看版本号</span><br></pre></td></tr></table></figure>
+
+
+
 <ol start="3">
 <li>下载hexo</li>
 </ol>
-<p>cnpm hexo install -g hexo-cli<br>hexo -v #查看hexo框架。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm hexo install -g hexo-cli</span><br><span class="line">hexo -v #查看hexo框架。</span><br></pre></td></tr></table></figure>
+
+
+
 <ol start="4">
 <li>创建一个空目录，用来作博客文件夹（目录），当操作失误修改无果，直接删掉就行。</li>
 </ol>
-<p>mkdir &#x2F;blog    #根据视频演示，创建Blog文件夹，文件夹名可自行修改。<br>cd &#x2F;blog  #进入blog文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /blog    #根据视频演示，创建Blog文件夹，文件夹名可自行修改。</span><br><span class="line">cd /blog  #进入blog文件夹</span><br></pre></td></tr></table></figure>
+
+
+
 <ol start="5">
 <li>hexo初始化，如果有梯子建议用梯子进行下载，速度会快一点，无梯子则需要等待一会。</li>
 </ol>
-<p>hexo init             #安装hexo的各种所需要的文件。</p>
-<p>#会显示如下：<br>#INFO  Cloning hexo-starter <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-starter.git">https://github.com/hexojs/hexo-starter.git</a><br>#INFO  Install dependencies<br>#INFO  Start blogging with Hexo!</p>
-<p>[root@docker-lnmp blog]# ls -l<br>总用量 180<br>-rw-r–r–.   1 root root      0 7月   2 11:21 _config.landscape.yml<br>-rw-r–r–.   1 root root   2441 7月   2 11:21 _config.yml<br>drwxr-xr-x. 220 root root   8192 7月   2 11:21 node_modules<br>-rw-r–r–.   1 root root    615 7月   2 11:21 package.json<br>-rw-r–r–.   1 root root 163482 7月   2 11:21 package-lock.json<br>drwxr-xr-x.   2 root root     52 7月   2 11:21 scaffolds<br>drwxr-xr-x.   3 root root     20 7月   2 11:21 source<br>drwxr-xr-x.   2 root root     22 7月   2 11:21 themes</p>
-<p>#安装完成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">hexo init             #安装hexo的各种所需要的文件。</span><br><span class="line"></span><br><span class="line">#会显示如下：</span><br><span class="line">#INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git</span><br><span class="line">#INFO  Install dependencies</span><br><span class="line">#INFO  Start blogging with Hexo!</span><br><span class="line"></span><br><span class="line">[root@docker-lnmp blog]# ls -l</span><br><span class="line">总用量 180</span><br><span class="line">-rw-r--r--.   1 root root      0 7月   2 11:21 _config.landscape.yml</span><br><span class="line">-rw-r--r--.   1 root root   2441 7月   2 11:21 _config.yml</span><br><span class="line">drwxr-xr-x. 220 root root   8192 7月   2 11:21 node_modules</span><br><span class="line">-rw-r--r--.   1 root root    615 7月   2 11:21 package.json</span><br><span class="line">-rw-r--r--.   1 root root 163482 7月   2 11:21 package-lock.json</span><br><span class="line">drwxr-xr-x.   2 root root     52 7月   2 11:21 scaffolds</span><br><span class="line">drwxr-xr-x.   3 root root     20 7月   2 11:21 source</span><br><span class="line">drwxr-xr-x.   2 root root     22 7月   2 11:21 themes</span><br><span class="line"></span><br><span class="line">#安装完成</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
 <ol start="6">
 <li>启动hexo</li>
 </ol>
-<p>[root@docker-lnmp blog]# hexo s<br>INFO  Validating config<br>INFO  Start processing<br>INFO  Hexo is running at <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> . Press Ctrl+C to stop.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@docker-lnmp blog]# hexo s</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+
 <p>#在网页输入：localhost:4000 或 虚拟机Ip：xxx.xxx.xxx.xxx:4000 即可。</p>
+<ol start="7">
+<li>写博客</li>
+</ol>
+<p>先使用ctrl + C 把博客进程终止，然后使用hexo n “xxx”  #xxx是输入博客的题目。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@docker-lnmp blog]# hexo n &quot;博客搭建&quot;</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: /xxx/xxx/_posts/博客搭建.md</span><br><span class="line"></span><br><span class="line">cd /xxx/xxx/_posts/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ls -l</span><br><span class="line"></span><br><span class="line">-rw-r--r--. 1 root root  838 7月   2 11:21 hello-world.md</span><br><span class="line">-rw-r--r--. 1 root root 1885 7月   2 11:32 博客搭建.md</span><br><span class="line"></span><br><span class="line">vim xxxx.md     #编写博客，写完保存并退出。</span><br><span class="line"></span><br><span class="line">cd ../..    #退出到hexo文件那。</span><br><span class="line"></span><br><span class="line">hexo s  #开启hexo程序，进入网址，就更新了。</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>挂到github上，</li>
+</ol>
+<p>（1）先登录github，在头像那点 your repositories。</p>
+<p>（2）点一下绿色按钮的 New ，创建一个 repositories 。注意：你的 Repository name 要与你的用户名相同，这样就可以输入你的 用户名.github.io 登录了。</p>
+<p>（3）创建完后先放着，回到虚拟机，下载hexo-deployer-git插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>   (4)   配置_config.yml文件，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">[root@docker-lnmp blog]# vim _config.yml</span><br><span class="line"></span><br><span class="line">#最底层</span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:xxx/xxx.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  </span><br><span class="line">#保存退出</span><br><span class="line"></span><br><span class="line">[root@docker-lnmp blog]# hexo d  会让你输入用户和密码</span><br><span class="line">······</span><br><span class="line">Username for ’htpps://github.com‘: xxx     #输入你github的用户名</span><br><span class="line">Password for &#x27;https://xxx@github.com&#x27;:     #输入你github登录密码</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">INFO  Copying files from extend dirs...</span><br><span class="line"># 位于分支 master</span><br><span class="line">无文件要提交，干净的工作区</span><br><span class="line">Counting objects: 36, done.</span><br><span class="line">Delta compression using up to 2 threads.</span><br><span class="line">Compressing objects: 100% (28/28), done.</span><br><span class="line">Writing objects: 100% (36/36), 883.95 KiB | 0 bytes/s, done.</span><br><span class="line">Total 36 (delta 5), reused 0 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (5/5), done.</span><br><span class="line">To git@github.com:ThunderHud/ThunderHud.github.io.git</span><br><span class="line"> * [new branch]      HEAD -&gt; master</span><br><span class="line">分支 master 设置为跟踪来自 git@github.com:ThunderHud/ThunderHud.github.io.git 的远程分支 master。</span><br><span class="line">INFO  Deploy done: git</span><br><span class="line"></span><br><span class="line">推送成功后，你GitHub的repositories会出现很多一些文件，然后在新的网页输入xxx.github.io就可以了，第一次会出现页面不存在的情况，再刷新一次就可以了。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>更换博客主题</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#可在网址输入：https://github.com/litten/hexo-theme-yilia   </span><br><span class="line">#可以在github上搜索其他的hexo主题</span><br><span class="line"></span><br><span class="line">[root@docker-lnmp blog]# git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br><span class="line"></span><br><span class="line">[root@docker-lnmp blog]# vim _config.yml</span><br><span class="line">#修改theme配置</span><br><span class="line"></span><br><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: yilia         #将 landscape 修改未yilia</span><br><span class="line"></span><br><span class="line">#:Wq保存并退出</span><br><span class="line"></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">hexo s</span><br><span class="line">#更换主题时会比较慢，一会就会更换主题了</span><br></pre></td></tr></table></figure>
+
+
+
 
       
     </div>
@@ -218,6 +324,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/07/03/docker%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC/">docker安装脚本</a>
+          </li>
         
           <li>
             <a href="/2022/07/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
