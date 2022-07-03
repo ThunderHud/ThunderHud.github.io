@@ -71,6 +71,82 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-LNMP基础脚本" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/" class="article-date">
+  <time class="dt-published" datetime="2022-07-03T03:05:47.000Z" itemprop="datePublished">2022-07-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/">LNMP基础脚本</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>注：MySQL、PHP、Nginx 的tar包皆放到&#x2F;opt下，根据需求修改目录、配置。</p>
+<p>#!&#x2F;bin&#x2F;bash<br>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;epel.repo <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/repo/epel-7.repo">http://mirrors.aliyun.com/repo/epel-7.repo</a><br>yum makecache</p>
+<p>useradd -r nginx -s &#x2F;bin&#x2F;false<br>cd &#x2F;opt<br>tar -zxvf nginx-1.20.2.tar.gz &amp;&amp; cd nginx-1.20.2<br>yum -y install gcc gcc-c++ automake openssl openssl-devel make pcre-devel gd-devel libaio libaio-devel oniguruma-devel</p>
+<p>yum install autoconf gcc libxml2-devel openssl-devel curl-devel libjpeg-devel libpng-devel libXpm-devel -y </p>
+<p>yum install freetype-devel libmcrypt-devel make ImageMagick-devel libssh2-devel gcc-c++ cyrus-sasl-devel  sqlite-devel -y</p>
+<p>.&#x2F;configure –prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx –user&#x3D;nginx  –group&#x3D;nginx –sbin-path&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;nginx –conf-path&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf –error-log-path&#x3D;&#x2F;var&#x2F;log&#x2F;nginx&#x2F;nginx.log –http-log-path&#x3D;&#x2F;var&#x2F;log&#x2F;nginx&#x2F;access.log –modules-path&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;modules –with-select_module –with-poll_module –with-threads  –with-http_ssl_module –with-http_v2_module  –with-http_realip_module –with-http_image_filter_module –with-http_sub_module –with-http_flv_module –with-http_gunzip_module –with-http_gzip_static_module  –with-http_stub_status_module –with-stream</p>
+<p>make &amp;&amp; make install</p>
+<p>ln -s &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;nginx &#x2F;usr&#x2F;sbin&#x2F;nginx<br>nginx</p>
+<p>cd &#x2F;opt</p>
+<p>tar -zxvf php-7.4.28.tar.gz<br>cd php-7.4.28<br>.&#x2F;configure <br>–prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;php <br>–with-config-file-path&#x3D;&#x2F;usr&#x2F;local&#x2F;php&#x2F;etc <br>–with-config-file-scan-dir&#x3D;&#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php.d <br>–disable-ipv6 <br>–enable-bcmath <br>–enable-calendar <br>–enable-exif <br>–enable-fpm <br>–with-fpm-user&#x3D;www <br>–with-fpm-group&#x3D;www <br>–enable-ftp <br>–enable-gd-jis-conv <br>–enable-gd-native-ttf <br>–enable-inline-optimization <br>–enable-mbregex <br>–enable-mbstring <br>–enable-mysqlnd <br>–enable-opcache <br>–enable-pcntl <br>–enable-shmop <br>–enable-soap <br>–enable-sockets <br>–enable-static <br>–enable-sysvsem <br>–enable-wddx <br>–enable-xml <br>–with-curl <br>–with-gd <br>–with-jpeg-dir <br>–with-freetype-dir <br>–with-xpm-dir <br>–with-png-dir <br>–with-gettext <br>–with-iconv <br>–with-libxml-dir <br>–with-mcrypt <br>–with-mhash <br>–with-mysqli <br>–with-pdo-mysql <br>–with-pear <br>–with-openssl <br>–with-xmlrpc <br>–with-zlib <br>–disable-debug <br>–disable-phpdbg </p>
+<p>make &amp;&amp; make install</p>
+<p>cp &#x2F;opt&#x2F;php-7.4.28&#x2F;sapi&#x2F;fpm&#x2F;init.d.php-fpm  &#x2F;usr&#x2F;local&#x2F;php&#x2F;php-fpm</p>
+<p>chmod a+x &#x2F;usr&#x2F;local&#x2F;php&#x2F;php-fpm</p>
+<p>cp &#x2F;opt&#x2F;php-7.4.28&#x2F;php.ini-development  &#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php.ini</p>
+<p>cp &#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php-fpm.conf.default  &#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php-fpm.conf</p>
+<p>cp &#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php-fpm.d&#x2F;<a target="_blank" rel="noopener" href="http://www.conf.default/">www.conf.default</a>   &#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php-fpm.d&#x2F;<a target="_blank" rel="noopener" href="http://www.conf/">www.conf</a></p>
+<p>useradd www -s &#x2F;sbin&#x2F;nologin</p>
+<p>&#x2F;usr&#x2F;local&#x2F;php&#x2F;php-fpm start</p>
+<p>cd &#x2F;opt</p>
+<p>yum -y remove mariadb*</p>
+<p>tar -zxvf mysql-5.7.30-linux-glibc2.12-x86_64.tar.gz -C &#x2F;usr&#x2F;local&#x2F;</p>
+<p>cd &#x2F;usr&#x2F;local&#x2F;</p>
+<p>mv mysql-5.7.30-linux-glibc2.12-x86_64 mysql</p>
+<p>cd &#x2F;usr&#x2F;local&#x2F;mysql</p>
+<p>useradd mysql -s &#x2F;sbin&#x2F;nologin</p>
+<p>mkdir -p &#x2F;data&#x2F;mysql</p>
+<p>mkdir -p &#x2F;var&#x2F;log&#x2F;mysql</p>
+<p>chown mysql:mysql -R &#x2F;usr&#x2F;local&#x2F;mysql  &#x2F;data&#x2F;mysql  &#x2F;var&#x2F;log&#x2F;mysql</p>
+<p>echo “export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin” &gt;&gt;&#x2F;etc&#x2F;profile &amp;&amp; source &#x2F;etc&#x2F;profile</p>
+<p>cat &gt; &#x2F;etc&#x2F;my.cnf &lt;&lt; EOF<br>[mysqld]<br>user&#x3D;mysql<br>basedir&#x3D;&#x2F;usr&#x2F;local&#x2F;mysql<br>datadir&#x3D;&#x2F;data&#x2F;mysql<br>server_id&#x3D;1<br>port&#x3D;3306<br>socket&#x3D;&#x2F;data&#x2F;mysql&#x2F;mysql.sock</p>
+<p>[mysql]<br>socket&#x3D;&#x2F;data&#x2F;mysql&#x2F;mysql.sock </p>
+<p>[mysqld_safe]<br>log-error&#x3D;&#x2F;var&#x2F;log&#x2F;mysql&#x2F;error.log<br>pid-file&#x3D;&#x2F;data&#x2F;mysql&#x2F;mysql.pid<br>EOF</p>
+<p>cp &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;support-files&#x2F;mysql.server &#x2F;etc&#x2F;init.d&#x2F;mysqld</p>
+<p>chmod +x &#x2F;etc&#x2F;init.d&#x2F;mysqld</p>
+<p>chkconfig –add mysqld</p>
+<p>mysqld –initialize-insecure  –user&#x3D;mysql –basedir&#x3D;&#x2F;usr&#x2F;local&#x2F;mysql –datadir&#x3D;&#x2F;data&#x2F;mysql</p>
+<p>systemctl start mysqld</p>
+<p>mysql -uroot  -S &#x2F;data&#x2F;mysql&#x2F;mysql.sock</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/" data-id="cl54qh2ma00009kwb5ktmb5k4" data-title="LNMP基础脚本" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-docker安装脚本" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/03/docker%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC/" class="article-date">
@@ -324,6 +400,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/">LNMP基础脚本</a>
+          </li>
         
           <li>
             <a href="/2022/07/03/docker%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC/">docker安装脚本</a>
