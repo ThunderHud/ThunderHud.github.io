@@ -1,249 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>nginx平滑升级 | My World</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="实战10、nginx平滑升级方案一、依托web高可用架构，将流量从需要升级的节点，切换到其他节点执行，线下升级 方案二、将 代理服务器的 版本 从 1.18 升级到 1.20，平滑&#x2F;在线 升级 ps:旧版本程序需要先用绝对路径启动（因为可以调用系统变量）1、备份原始程序2、复制原始 编译参数  nginx -V3、编译  新程序到   make   阶段 （注意不要执行 make ins">
-<meta property="og:type" content="article">
-<meta property="og:title" content="nginx平滑升级">
-<meta property="og:url" content="http://example.com/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/index.html">
-<meta property="og:site_name" content="My World">
-<meta property="og:description" content="实战10、nginx平滑升级方案一、依托web高可用架构，将流量从需要升级的节点，切换到其他节点执行，线下升级 方案二、将 代理服务器的 版本 从 1.18 升级到 1.20，平滑&#x2F;在线 升级 ps:旧版本程序需要先用绝对路径启动（因为可以调用系统变量）1、备份原始程序2、复制原始 编译参数  nginx -V3、编译  新程序到   make   阶段 （注意不要执行 make ins">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-07-05T23:30:14.000Z">
-<meta property="article:modified_time" content="2022-07-05T23:31:08.797Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="My World" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+extends includes/layout.pug
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+block content
+  #post
+    if top_img === false
+      include includes/header/post-info.pug
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+    article#article-container.post-content!=page.content
+    include includes/post/post-copyright.pug
+    .tag_share
+      if (theme.post_meta.post.tags)
+        .post-meta__tag-list
+          each item, index in page.tags.data
+            a(href=url_for(item.path)).post-meta__tags #[=item.name]
+      include includes/third-party/share/index.pug
+        
+    if theme.reward.enable && theme.reward.QR_code
+      !=partial('includes/post/reward', {}, {cache: true})
 
-  
-<meta name="generator" content="Hexo 6.2.0"></head>
+    //- ad
+    if theme.ad && theme.ad.post
+      .ads-wrap!=theme.ad.post
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">My World</a>
-      </h1>
+    if theme.post_pagination
+      include includes/pagination.pug
+    if theme.related_post && theme.related_post.enable
+      != related_posts(page,site.posts)
+
+    if page.comments !== false && theme.comments && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache: true})
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main"><article id="post-nginx平滑升级" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/" class="article-date">
-  <time class="dt-published" datetime="2022-07-05T23:30:14.000Z" itemprop="datePublished">2022-07-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      nginx平滑升级
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>实战10、nginx平滑升级<br>方案一、依托web高可用架构，将流量从需要升级的节点，<br>切换到其他节点执行，线下升级</p>
-<p>方案二、<br>将 代理服务器的 版本 从 1.18 升级到 1.20，平滑&#x2F;在线 升级</p>
-<p>ps:旧版本程序需要先用绝对路径启动（因为可以调用系统变量）<br>1、备份原始程序<br>2、复制原始 编译参数  nginx -V<br>3、编译  新程序到   make   阶段 （注意不要执行 make install ）<br>4、拷贝新版程序到 当前 nginx 文件夹  替换到原始版本，需要加 -f 参数，否则报文件正忙</p>
-<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src&#x2F;nginx-1.20.1]# cp -f  &#x2F;usr&#x2F;local&#x2F;src&#x2F;nginx-1.20.1&#x2F;objs&#x2F;nginx  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;</p>
-<p>cp -f  &#x2F;usr&#x2F;local&#x2F;src&#x2F;nginx-1.21.3&#x2F;objs&#x2F;nginx  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;<br>5、检查新版程序运行情况<br>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src&#x2F;nginx-1.20.1]# &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx -version<br>nginx version: nginx&#x2F;1.20.1</p>
-<p>6、kill  -USR2   旧版本的主进程号， 同时启动一个新程序的 Master进程，此时 新旧版本同时存在</p>
-<p>旧版本 nginx 的主进程将重命名它的 pid 文件为 .oldbin(例如：&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;nginx.pid.oldbin)，<br>然后执行新版本的 nginx 可执行程序，依次启动新的主进程和新的工作进程。 </p>
-<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# ps axu | grep  master<br>root       1036  0.0  0.4  45976  2088 ?        Ss   09:57   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx</p>
-<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# kill -USR2 1036</p>
-<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# ps axu | grep  master<br>root       1036  0.0  0.4  45976  2088 ?        Ss   09:57   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>root       3778  0.0  0.7  45936  3408 ?        S    10:58   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx</p>
-<p>7、 kill -WINCH  旧版本的主进程号<br>（让旧版本的 worker 进程完成已有请求，且不再接受新请求，新请求发给新进程）</p>
-<p>此时，新、旧版本的 nginx 实例会同时运行，共同处理输入的请求。<br>要逐步停止旧版本的 nginx 实例，你必须发送 WINCH 信号给旧的主进程，然后，它的工作进程就将开始从容关闭： </p>
-<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# ps axu | grep  nginx<br>root       1036  0.0  0.4  45976  2088 ?        Ss   09:57   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>nginx      1071  0.0  5.8  72600 28444 ?        S    10:23   0:00 nginx: worker process<br>root       3778  0.0  0.7  45936  3408 ?        S    10:58   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>nginx      3779  0.0  5.9  73072 28596 ?        S    10:58   0:00 nginx: worker process</p>
-<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# kill -WINCH 1036</p>
-<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# ps axu | grep  nginx<br>root       1036  0.0  0.4  45976  2088 ?        Ss   09:57   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>root       3778  0.0  0.7  45936  3408 ?        S    10:58   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>nginx      3779  0.0  5.9  73072 28596 ?        S    10:58   0:00 nginx: worker process</p>
-<p>一段时间后，旧的工作进程(worker process)处理了所有已连接的请求后退出，仅由新的工作进程来处理输入的请求了</p>
-<p>8、关闭旧的主进程   （关闭旧版本的 worker进程）<br>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# kill -QUIT 1036</p>
-<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# ps axu | grep  nginx<br>root       3778  0.0  0.7  45936  3408 ?        S    10:58   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>nginx      3779  0.0  5.9  73072 28848 ?        S    10:58   0:00 nginx: worker process</p>
-<p>总结：—————————————–</p>
-<p>1、备份老程序<br>2、重新编译 （旧参数+ 新的参数）<br>3、新程序  强制 覆盖 旧 nginx 程序  cp  -f<br>4、kill  -USR2  老进程<br>5、Kill  -WINCH  老进程<br>6、Kill  -QUIT  老进程</p>
-<p>● Nginx 的信号控制<br>•     TERM, INT 快速关闭<br>•     QUIT 从容关闭<br>•     HUP 平滑重启，重新加载配置文件<br>•     USR1 重新打开日志文件，在切割日志时用途较大<br>•     USR2 平滑升级可执行程序<br>•     WINCH 从容关闭工作进程</p>
-<p>第一步：查看当前Nginx版本信息<br>nginx -V<br>[root@localhost nginx-1.20.1]# nginx -V<br>nginx version: nginx&#x2F;1.20.1<br>built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC)<br>built with OpenSSL 1.0.2k-fips  26 Jan 2017<br>TLS SNI support enabled<br>configure arguments: –prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx –user&#x3D;nginx –group&#x3D;nginx –sbin-path&#x3D;&#x2F;usr&#x2F;sbin&#x2F;nginx –conf-path&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf –error-log-path&#x3D;&#x2F;var&#x2F;log&#x2F;nginx&#x2F;error.log –http-log-path&#x3D;&#x2F;var&#x2F;log&#x2F;nginx&#x2F;access.log –modules-path&#x3D;&#x2F;usr&#x2F;lib&#x2F;nginx&#x2F;modules –with-select_module –with-poll_module –with-threads –with-http_ssl_module –with-http_v2_module –with-http_realip_module –with-http_image_filter_module –with-http_sub_module –with-http_flv_module –with-http_gunzip_module –with-http_gzip_static_module –with-http_stub_status_module –with-stream<br>把这些模块复制，等下升级的版本预编译里面把这些复制进去。添加模块也可以自行在这基础上添加</p>
-<p>第二步：wget 要更新版本的安装包链接，下载下来解压</p>
-<p>第三步：进入新版本的解压包里面，执行.&#x2F;configure 模块 ，make<br>在编译的目录中执行如下命令，make upgrade<br>make完以后，不需要执行make install，否则会覆盖安装，nginx服务会出现各种问题<br>不中断nginx web服务器的正常运行称之为平滑升级，先重命名之前的nginx二进制文件<br>make完之后，会生成一个objs的包，里面有nginx的命令</p>
-<p>第四步：把nginx的命令备份一下，在备份前，先把当前版本的nginx启动起来<br>&#x2F;usr&#x2F;sbin&#x2F;nginx<br>mv &#x2F;usr&#x2F;sbin&#x2F;nginx &#x2F;usr&#x2F;sbin&#x2F;nginx.bak</p>
-<p>把新版本的包里面的objs包里的命令复制到&#x2F;usr&#x2F;sbin&#x2F;nginx（这个目录只是我们设置的，如果你的启动文件不放在这里也是可以的）<br>拷贝新版程序到 当前 nginx 文件夹  替换到原始版本，需要加 -f 参数，否则报文件<br>cp -f objs&#x2F;nginx &#x2F;usr&#x2F;sbin&#x2F;nginx</p>
-<p>第五步：kill  -USR2   旧版本的主进程号， 同时启动一个新程序的 Master进程，此时 新旧版本同时存在旧版本 nginx 的主进程将重命名它的 pid 文件为 .oldbin<br>(例如：&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;nginx.pid.oldbin)，然后执行新版本的 nginx 可执行程序，依次启动新的主进程和新的工作进程。 </p>
-<p>第六步：kill -WINCH  旧版本的主进程号（让旧版本的 worker 进程完成已有请求，且不再接受新请求，新请求发给新进程）</p>
-<p>第七步：一段时间后，旧的工作进程(worker process)处理了所有已连接的请求后退出，仅由新的工作进程来处理输入的请求了<br>等待旧工作进程结束后再结束旧的主进程，完成此次升级<br>kill -QUIT 旧主进程号</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/" data-id="cl58t1m2b0000o8wbh8zj3p6r" data-title="nginx平滑升级" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">LNMP基础脚本</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/">nginx平滑升级</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/">LNMP基础脚本</a>
-          </li>
-        
-          <li>
-            <a href="/2022/01/03/docker%E5%AE%89%E8%A3%85/">docker安装</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/02/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
