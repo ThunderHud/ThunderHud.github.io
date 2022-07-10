@@ -1,213 +1,843 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>My World</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>My World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="My World">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="My World">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: 'Just',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'My World',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2022-07-10 15:05:56'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
+    <link rel="alternate" href="/atom.xml" title="My World" type="application/atom+xml">
   
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">My World</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-使用atlas实现mysql主从读写分离" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/09/%E4%BD%BF%E7%94%A8atlas%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/" class="article-date">
+  <time class="dt-published" datetime="2022-07-09T09:52:40.000Z" itemprop="datePublished">2022-07-09</time>
+</a>
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">My World</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">My World</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/07/09/%E4%BD%BF%E7%94%A8atlas%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/" title="使用atlas实现mysql主从读写分离"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用atlas实现mysql主从读写分离"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/07/09/%E4%BD%BF%E7%94%A8atlas%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/" title="使用atlas实现mysql主从读写分离">使用atlas实现mysql主从读写分离</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-07-09T09:52:40.000Z" title="Created 2022-07-09 17:52:40">2022-07-09</time></span></div><div class="content">使用 atlas实现mysql主从读写分离1.atlas简介Atlas是由 Qihoo 360公司Web平台部基础架构团队开发维护的一个基于MySQL协议的数据中间层项目。它在MySQL官方推出的MySQL-Proxy 0.8.2版本的基础上，修改了大量bug，添加了很多功能特性。目前该项目在360公司内部得到了广泛应用，很多MySQL业务已经接入了Atlas平台，每天承载的读写请求数达几十亿条。同时，有超过50家公司在生产环境中部署了Atlas，超过800人已加入了我们的开发者交流群，并且这些数字还在不断增加。（简介内容摘自github官网 https://github.com/Qihoo360/Atlas/wiki/Atlas%E7%9A%84%E6%9E%B6%E6%9E%84）1》主要功能：1.读写分离，2.从库负载均衡，3.IP过滤，4.自动分表，5.DBA可平滑上下线DB，6.自动摘除宕机的DB2》系统主要架构：Atlas是一个位于应用程序与MySQL之间中间件。在后端DB看来，Atlas相当于连接它的客户端，在前端应用看来，Atlas相当于一个DB。Atlas作为服务端与 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/07/09/MySQL%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84-HMA%E6%9E%B6%E6%9E%84/" title="MySQL高可用集群架构-HMA架构"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL高可用集群架构-HMA架构"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/07/09/MySQL%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84-HMA%E6%9E%B6%E6%9E%84/" title="MySQL高可用集群架构-HMA架构">MySQL高可用集群架构-HMA架构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-07-09T05:44:41.000Z" title="Created 2022-07-09 13:44:41">2022-07-09</time></span></div><div class="content">MySQL 高可用集群架构-MHA 架构MHA 简介MHA（Master High Availability）目前在 MySQL 高可用方面是一个相对成熟的解决方案，它由 日本 DeNA 公司 youshimaton （现就职于 Facebook 公司）开发，是一套优秀的作为 MySQL 高可用性环境下故障切换和主从提升的高可用软件。在 MySQL 故障切换过程中，MHA 能做到在 0~30 秒之内 自动完成数据库的故障切换操作，并且在进行故障切换的过程中，MHA 能在最大程度上保证数据的一致性，以达到真正意义上的高可用。该软件由两部分组成：MHA Manager （管理节点）和 MHA Node （数据节点）。MHA Manager 可以单独部署在一台独立的机器上管理多个 master-slave 集群，也可以部署在一台 slave 节点上。MHA Node 运行在每台 MySQL 服务器上，MHA  Manager 会定时探测集群中的 master 节点，当 master 出现故障时，它可以自动将最新数据的 slave 提升为新的 master ，然后将所有其他的 slave 重新 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/07/08/%E9%98%BF%E9%87%8C%E4%BA%91%E6%8B%89%E5%8F%96%E6%B5%B7%E5%A4%96%E9%95%9C%E5%83%8F/" title="阿里云拉取海外镜像"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="阿里云拉取海外镜像"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/07/08/%E9%98%BF%E9%87%8C%E4%BA%91%E6%8B%89%E5%8F%96%E6%B5%B7%E5%A4%96%E9%95%9C%E5%83%8F/" title="阿里云拉取海外镜像">阿里云拉取海外镜像</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-07-08T03:24:40.000Z" title="Created 2022-07-08 11:24:40">2022-07-08</time></span></div><div class="content">此知识分享为好友苏师兄
-阿里云镜像仓库拉取海外镜像一、登陆阿里云与Code主账号登录到阿里云上选择容器镜像服务，再新建窗口打开阿里云的Code平台，现在有新版与旧版；这里选择的是旧版。
-二、阿里云Code平台设置1)首次登录需要设置私人令牌，通俗来说就是密码
-2)创建新项目
-三、开始构建1)新建一个文件
-2)每一步创建或者更新等操作都需要提交信息
-3)构建拉取k8s.gcr.io&#x2F;kube-apiserver:v1.22.10
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/09/%E4%BD%BF%E7%94%A8atlas%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/">使用atlas实现mysql主从读写分离</a>
+    </h1>
+  
 
-创建一个名为Dockerfile的文件
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="使用-atlas实现mysql主从读写分离"><a href="#使用-atlas实现mysql主从读写分离" class="headerlink" title="使用 atlas实现mysql主从读写分离"></a>使用 atlas实现mysql主从读写分离</h2><p>1.atlas简介<br>Atlas是由 Qihoo 360公司Web平台部基础架构团队开发维护的一个基于MySQL协议的数据中间层项目。它在MySQL官方推出的MySQL-Proxy 0.8.2版本的基础上，修改了大量bug，添加了很多功能特性。目前该项目在360公司内部得到了广泛应用，很多MySQL业务已经接入了Atlas平台，每天承载的读写请求数达几十亿条。同时，有超过50家公司在生产环境中部署了Atlas，超过800人已加入了我们的开发者交流群，并且这些数字还在不断增加。（简介内容摘自github官网 <a target="_blank" rel="noopener" href="https://github.com/Qihoo360/Atlas/wiki/Atlas%E7%9A%84%E6%9E%B6%E6%9E%84%EF%BC%89">https://github.com/Qihoo360/Atlas/wiki/Atlas%E7%9A%84%E6%9E%B6%E6%9E%84）</a><br>1》主要功能：<br>1.读写分离，2.从库负载均衡，3.IP过滤，4.自动分表，5.DBA可平滑上下线DB，6.自动摘除宕机的DB<br>2》系统主要架构：Atlas是一个位于应用程序与MySQL之间中间件。在后端DB看来，Atlas相当于连接它的客户端，在前端应用看来，Atlas相当于一个DB。Atlas作为服务端与应用程序通讯，它实现了MySQL的客户端和服务端协议，同时作为客户端与MySQL通讯。它对应用程序屏蔽了DB的细节，同时为了降低MySQL负担，它还维护了连接池。</p>
+<p>主要看中它有以下优点：  </p>
+<p>(1)、基于Mysql-proxy-0.8.2 进行修改，代码完全开源；<br>(2)、比较轻量级，部署配置也比较简单；<br>(3)、支持DB读写分离；<br>(4)、支持从DB读，负载均衡，并自动剔除故障，从DB；<br>(5)、支持平滑 ，上下线DB；<br>(6)、具备较好的安全机制 （IP 过滤、账号认证）；<br>(7)、版本更新、问题跟进、交流圈子都比较活跃。</p>
+<p>基于MHA基础上部署 atlas<br>（参照笔记mysql10部署MHA）<br>接下来部署 atlas ，具体的搭建环境如下（所有操作系统均为CentOS7.4 64bit）：</p>
+<table>
+<thead>
+<tr>
+<th>点击这里</th>
+<th>点击这里</th>
+<th>点击这里</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IP 地址</td>
+<td>主机名</td>
+<td>角色</td>
+</tr>
+<tr>
+<td>192.168.245.182</td>
+<td>atlas</td>
+<td>atlas</td>
+</tr>
+<tr>
+<td>192.168.245.183</td>
+<td>mysql3</td>
+<td>slave</td>
+</tr>
+<tr>
+<td>192.168.245.184</td>
+<td>mysql4</td>
+<td>slave</td>
+</tr>
+<tr>
+<td>192.168.245.185</td>
+<td>mysql5</td>
+<td>master</td>
+</tr>
+</tbody></table>
+<p>2、下载安装包方式：<br>可以到360 github mysql主页下载 wget <a target="_blank" rel="noopener" href="https://github.com/Qihoo360/Atlas/releases/download/2.2.1/Atlas-2.2.1.el6.x86_64.rpm">https://github.com/Qihoo360/Atlas/releases/download/2.2.1/Atlas-2.2.1.el6.x86_64.rpm</a></p>
+<p>3、安装 mysql<br>上传 Atlas-2.2.1.el6.x86_64.rpm 程序包到atlas主机上</p>
+<p>[root@atlas opt]# rpm -ivh Atlas-2.2.1.el6.x86_64.rpm<br>安装完成后会在&#x2F;usr&#x2F;local&#x2F;mysql-proxy&#x2F;目录下生成以下脚本文件：<br><img src="https://s2.loli.net/2022/03/07/BuqTW3F1lQhNiwD.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\1.png"></p>
+<p>密码的生成：<br>[root@atlas bin]# cd &#x2F;usr&#x2F;local&#x2F;mysql-proxy&#x2F;bin<br>[root@atlas bin]# .&#x2F;encrypt 123456     #此为授权用户密码<br>&#x2F;iZxz+0GRoA&#x3D;</p>
+<p>备份配置文件<br>[root@atlas conf]# cd &#x2F;usr&#x2F;local&#x2F;mysql-proxy&#x2F;conf<br>[root@atlas conf]# cp test.cnf test.cnf.bak<br>[root@atlas conf]# vim test.cnf<br>[mysql-proxy]<br>admin-username &#x3D; user<br>admin-password &#x3D; pwd<br>proxy-backend-addresses &#x3D;MHAVIP:3306       #修改为主库IP，端口<br>proxy-read-only-backend-addresses &#x3D;读库1:3306,读库2:3306 #修改为从库IP，端口<br>pwds &#x3D; repl_user:&#x2F;iZxz+0GRoA&#x3D;,mha:O2jBXONX098&#x3D; #填写主从复制账号:生成好的密码<br>daemon &#x3D; true<br>keepalive &#x3D; true<br>event-threads &#x3D; 8<br>log-level &#x3D; message<br>log-path &#x3D; &#x2F;usr&#x2F;local&#x2F;mysql-proxy&#x2F;log<br>sql-log &#x3D; ON                            #开启sql日志<br>proxy-address &#x3D; 0.0.0.0:520   #可以自定义端口<br>admin-address &#x3D; 0.0.0.0:2345<br>charset &#x3D; utf8                      #开启默认字符集</p>
+<p>启动atlas<br>.&#x2F;mysql-proxyd 配置文件 {start|stop|restart|status}</p>
+<p>[root@atlas bin]# .&#x2F;mysql-proxyd test start<br>OK: MySQL-Proxy of test is started</p>
+<p>注意：<br>运行文件是：mysql-proxyd(不是mysql-proxy）<br>test是conf目录下配置文件的名字</p>
+<p>安装mysql客户端，不需要启动服务端</p>
+<p>使用atlas进入数据库<br>1.进入atlas的管理模式：<br>[root@atlas bin]# mysql  -uuser -ppwd  -h atlas所在节点 -P2345</p>
+<p>查看mysql管理员模式容许操作： select * from help;<br><img src="https://s2.loli.net/2022/03/07/4DhRe25J1sTGUzv.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\2.png"></p>
+<p>查看主从库的读写情况：<br>MySQL [(none)]&gt;select * from backends;<br><img src="https://s2.loli.net/2022/03/07/A5QEedDNyhc6ml8.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\3.png"></p>
+<p>添加新节点：<br>MySQL [(none)]&gt; add slave 192.168.245.134:3306;<br><img src="https://s2.loli.net/2022/03/07/nzBWw1U7eNFTpch.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\4.png"></p>
+<p>节点下线:<br>MySQL [(none)]&gt; SET OFFLINE 3;<br><img src="https://s2.loli.net/2022/03/07/NGfJ8sumkLyUQBh.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\5.png"></p>
+<p>节点上线：       #不成功是因为这台机是虚假，这台机不存在<br>MySQL [(none)]&gt; set online 4;<br><img src="https://s2.loli.net/2022/03/07/i5K6qCIaZBzPcnv.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\6.png"></p>
+<p>MySQL [(none)]&gt; set online 3;<br><img src="https://s2.loli.net/2022/03/07/OKPWCm2Msr8Fj4i.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\7.png"></p>
+<p>删除节点：<br>MySQL [(none)]&gt; remove backend 4;<br>MySQL [(none)]&gt; SELECT * FROM backends;<br><img src="https://s2.loli.net/2022/03/07/wlek5r987HLDxty.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\8.png"></p>
+<p>以上操作均为临时操作，想永久保存，需要执行save config;</p>
+<h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><p>先在主库mysql5上授权：<br>mysql&gt;grant all on <em>.</em> to xiaohong@’%’ identified by ‘123456’;<br>阿特拉斯所在[(none)]&gt;SELECT * FROM pwds;查看用户<br>阿特拉斯所在[(none)]&gt;add pwd xiao:hong; (将主库授权的用户放到atlas上)</p>
+<h3 id="读写分离测试"><a href="#读写分离测试" class="headerlink" title="读写分离测试"></a>读写分离测试</h3><p>测试读操作：<br>mysql -umha -pmha123456 -h atlas所在节点 -P520</p>
+<p>mysql&gt;select @@server_id;<br>会发现轮询读操作。</p>
+<p>测试写操作：<br>mysql&gt; begin;select @@server_id;commit;<br>用事务测试读写落点。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/09/%E4%BD%BF%E7%94%A8atlas%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/" data-id="cl5dpl2bm00004zwb8wzfgx6c" data-title="使用atlas实现mysql主从读写分离" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
 
-四、容器镜像服务构建规则容器镜像服务 &#x3D;&#x3D;&gt; 实例列表 &#x3D;&#x3D;&gt; 镜像仓库
-创建仓库
-绑定云Code账号
-仓库绑定云Code重复创建仓库，进入这里；选择命名空间与云Code的项目
 
-等待创建仓库，创建规则
+  
+    <article id="post-MySQL高可用集群架构-HMA架构" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/09/MySQL%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84-HMA%E6%9E%B6%E6%9E%84/" class="article-date">
+  <time class="dt-published" datetime="2022-07-09T05:44:41.000Z" itemprop="datePublished">2022-07-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/09/MySQL%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84-HMA%E6%9E%B6%E6%9E%84/">MySQL高可用集群架构-HMA架构</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="MySQL-高可用集群架构-MHA-架构"><a href="#MySQL-高可用集群架构-MHA-架构" class="headerlink" title="MySQL 高可用集群架构-MHA 架构"></a>MySQL 高可用集群架构-MHA 架构</h2><p><strong>MHA 简介</strong><br>MHA（Master High Availability）目前在 MySQL 高可用方面是一个相对成熟的解决方案，它由 日本 DeNA 公司 youshimaton （现就职于 Facebook 公司）开发，是一套优秀的作为 MySQL 高可用性环境下故障切换和主从提升的高可用软件。在 MySQL 故障切换过程中，MHA 能做到在 0~30 秒之内 自动完成数据库的故障切换操作，并且在进行故障切换的过程中，MHA 能在最大程度上保证数据的一致性，以达到真正意义上的高可用。<br>该软件由两部分组成：MHA Manager （管理节点）和 MHA Node （数据节点）。MHA Manager 可以单独部署在一台独立的机器上管理多个 master-slave 集群，也可以部署在一台 slave 节点上。MHA Node 运行在每台 MySQL 服务器上，MHA  Manager 会定时探测集群中的 master 节点，当 master 出现故障时，它可以自动将最新数据的 slave 提升为新的 master ，然后将所有其他的 slave 重新指向新 的master。整个故障转移过程对应用程序完全透明。</p>
+<p>目前 MHA 主要支持一主多从的架构，要搭建 MHA,要求一个复制集群中必须最少有三台数据库服务器，一主二从，即一台充当 master ，一台从机充当备用master ，另外一台充当从库，因为至少需要三台服务器。MHA 适合任何存储引擎, 只要能主从复制的存储引擎它都支持，</p>
+<p>下图展示了如何通过 MHA Manager 管理多组主从复制。<br><img src="https://s2.loli.net/2022/03/07/AQ2SVINvqkGXMti.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\1.png"><br> 1.MHA 工作原理总结为如下：<br>（1）从宕机崩溃的 master 保存二进制日志事件（binlog events ）(数据节点操作)<br>（2）识别含有最新更新的 slave ；<br>（3）应用差异的中继日志（relay log ）到其他的 slave ；<br>（4）应用从 master 保存的二进制日志事件（binlog events）（管理节点操作）<br>（5）提升一个 slave 为新的master ；<br>（6）使其他的 slave 连接新的 master 进行复制 。</p>
+<p>2.MHA 软件由两部分组成，Manager (管理节点)工具包和 Node （数据节点）工具包，具体的说明如下。</p>
+<p>Manager 工具包主要包括以下几个工具：</p>
+<p>masterha_check_ssh              检查 MHA 的SSH配置状况<br>masterha_check_repl             检查 MySQL 复制状况<br>masterha_check_status          检测当前 MHA 运行状态<br>masterha_manger                 启动 MHA<br>masterha_master_monitor      检测 master 是否宕机<br>masterha_master_switch        手工转移故障<br>masterha_conf_host              添加或删除配置的 server 信息<br>masterha_secondary_check    从远程服务器建立TCP连接<br>masterha_stop                      停止 MHA</p>
+<p>Node 工具包（这些工具通常由 MHA Manager 的脚本触发，无需人为操作）主要包括以下几个工具：</p>
+<p>save_binary_logs         保存和复制master 的二进制日志<br>apply_diff_relay_logs   识别差异的中继日志事件并将其差异的事件应用于其他的 slave<br>purge_relay_logs         清除中继日志（不会阻塞 SQL 线程）</p>
+<p>3.服务器环境规划</p>
+<table>
+<thead>
+<tr>
+<th>主机名</th>
+<th>服务器IP地址</th>
+<th>数据库角色</th>
+<th>MHA角色</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mysql3</td>
+<td>192.168.245.183</td>
+<td>主库</td>
+<td>数据节点</td>
+</tr>
+<tr>
+<td>mysql4</td>
+<td>192.168.245.184</td>
+<td>从库</td>
+<td>管理节点</td>
+</tr>
+<tr>
+<td>mysql5</td>
+<td>192.168.245.185</td>
+<td>从库</td>
+<td>数据节点</td>
+</tr>
+</tbody></table>
+<p>4.数据库环境<br>    3台服务器安装好mysql服务，并配置好主从同步复制</p>
+<p>配好网络</p>
+<p>配好主机名</p>
+<p>设别名</p>
+<p>重新生成auto.cnf文件</p>
+<p>修改server-id</p>
+<p>主从配置文件</p>
+<p>从库需要添加<br>[mysqld]<br>log_bin&#x3D;&#x2F;data&#x2F;binlog&#x2F;mysqlx-bin<br>log-slave-updates&#x3D;1                     #开启此参数，可以让从库binlog转为主库binlog</p>
+<p>mysql3主库：<br><img src="https://s2.loli.net/2022/03/07/QVc59MP7GUf3KS8.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\2.png"></p>
+<p>mysql4从库：<br><img src="https://s2.loli.net/2022/03/07/MoiZbPnfz7ETYCL.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\3.png"></p>
+<p>mysql5从库：<br><img src="https://s2.loli.net/2022/03/07/naDMV9Ht1hpwjLU.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\4.png"></p>
+<p>5.配置hosts文件<br>在3台数据库服务器的hosts文件里都添加如下内容<br>[root@mysql3 ~]# tail -n3 &#x2F;etc&#x2F;hosts<br>192.168.245.183 mysql3<br>192.168.245.184 mysql4<br>192.168.245.185 mysql5</p>
+<p>[root@mysql4 ~]# tail -n3 &#x2F;etc&#x2F;hosts<br>192.168.245.183 mysql3<br>192.168.245.184 mysql4<br>192.168.245.185 mysql5</p>
+<p>[root@mysql5 ~]# tail -n3 &#x2F;etc&#x2F;hosts<br>192.168.245.183 mysql3<br>192.168.245.184 mysql4<br>192.168.245.185 mysql5</p>
+<p>6.配置ssh免密登录</p>
+<p>[root@mysql3 ~]# ssh-keygen -t dsa<br>[root@mysql3 ~]# ssh-copy-id 192.168.245.183<br>[root@mysql3 ~]# ssh-copy-id 192.168.245.184<br>[root@mysql3 ~]# ssh-copy-id 192.168.245.185</p>
+<p>[root@mysql4 ~]# ssh-keygen -t dsa<br>[root@mysql4 ~]# ssh-copy-id 192.168.245.183<br>[root@mysql4 ~]# ssh-copy-id 192.168.245.184<br>[root@mysql4 ~]# ssh-copy-id 192.168.245.185</p>
+<p>[root@mysql5 ~]# ssh-keygen -t dsa<br>[root@mysql5 ~]# ssh-copy-id 192.168.245.183<br>[root@mysql5 ~]# ssh-copy-id 192.168.245.184<br>[root@mysql5 ~]# ssh-copy-id 192.168.245.185</p>
+<p>8.添加命令<br>所有服务器节点均需要执行<br>ln -s &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;mysqlbinlog &#x2F;usr&#x2F;local&#x2F;bin&#x2F;mysqlbinlog<br>ln -s &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;mysql &#x2F;usr&#x2F;local&#x2F;bin&#x2F;mysql</p>
+<p>9.部署MHA软件<br>9.1.所有节点安装依赖包<br>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/repo/Centos-7.repo">http://mirrors.aliyun.com/repo/Centos-7.repo</a><br>需要安装最新的epel源（这里用的是阿里云的epel源）<br>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;epel.repo <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/repo/epel-7.repo">http://mirrors.aliyun.com/repo/epel-7.repo</a><br>需要做哪步？</p>
+<p> perl-DBD-MySQL</p>
+<p>7.2.下载管理节点manager与数据节点node<br><a target="_blank" rel="noopener" href="https://github.com/yoshinorim/mha4mysql-node/releases">https://github.com/yoshinorim/mha4mysql-node/releases</a><br><a target="_blank" rel="noopener" href="https://github.com/yoshinorim/mha4mysql-manager/releases">https://github.com/yoshinorim/mha4mysql-manager/releases</a></p>
+<p>7.3.安装数据节点<br>yum install -y perl-DBD-MySQL<br>[root@mysql3 opt]# rpm -ivh mha4mysql-node-0.58-0.el7.centos.noarch.rpm<br>[root@mysql4 opt]# rpm -ivh mha4mysql-node-0.58-0.el7.centos.noarch.rpm<br>[root@mysql5 opt]# rpm -ivh mha4mysql-node-0.58-0.el7.centos.noarch.rpm</p>
+<p>7.4.安装管理节点<br>yum install -y perl-Config-Tiny epel-release perl-Log-Dispatch perl-Parallel-ForkManager perl-Time-HiRes<br>[root@mysql4 opt]# rpm -ivh mha4mysql-manager-0.58-0.el7.centos.noarch.rpm</p>
+<p>8.MHA高可用方案配置<br>8.1.授权数据库管理账户<br>所有的服务器节点均需授权<br>mysql&gt;grant all privileges on <em>.</em> to mha@’%’ identified by ‘mha123456’;<br>mysql&gt; flush privileges;</p>
+<p>8.2.创建MHA配置文件<br>只需要在manager管理节点上进行<br>创建所需要的目录<br>[root@mysql4 opt]# tree &#x2F;mha<br>&#x2F;mha<br>├── conf<br>├── log<br>└── work</p>
+<p>创建MHA的配置文件<br>[root@mysql4 opt]# cat &#x2F;mha&#x2F;conf&#x2F;mha.conf<br>[server default]<br>user&#x3D;mha                            #MHA管理用户<br>password&#x3D;mha123456            #MHA管理用户的密码<br>ping_interval&#x3D;2                     #用于检测master是否正常,每2秒ping一次<br>repl_user&#x3D;repl_user              #主从复制的用户<br>repl_password&#x3D;123456          #主从复制的密码<br>ssh_user&#x3D;root                       #远程登录的用户</p>
+<p>manager_workdir&#x3D;&#x2F;mha&#x2F;work&#x2F;mha-work.log           #MHA工作日志目录<br>manager_log&#x3D;&#x2F;mha&#x2F;log&#x2F;mha.log     #MHA日志目录<br>master_binlog_dir&#x3D;&#x2F;data&#x2F;binlog                     #MHA寻找主库binlog日志的目录</p>
+<p>[server1]<br>hostname&#x3D;192.168.245.183    (主库ip或主机名)<br>port&#x3D;3306</p>
+<p>[server2]<br>hostname&#x3D;192.168.245.184     (从库1ip或主机名)<br>port&#x3D;3306<br>no_master&#x3D;1                 #开启从库不变成主库的参数</p>
+<p>[server3]<br>hostname&#x3D;192.168.245.185     (从库2ip或主机名)<br>port&#x3D;3306<br>candidate_master&#x3D;1                  #当主库故障时，优先成为主库<br>check_repl_delay&#x3D;0                  # (默认是落后100m日志量就不会选为主)此处改为0 则跳过日志量差异检查，强制为主库。</p>
+<p>8.3.检测MHA配置<br>8.3.1.检测SSH登录<br>[root@mysql4 ~]# masterha_check_ssh  –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf<br>出现“All SSH connection tests passed successfully.”这一提示为成功</p>
+<p>8.3.2.检测当前主从同步状态<br>[root@mysql4 ~]# masterha_check_repl  –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf<br>出现“MySQL Replication Health is OK.”这一提示为成功</p>
+<p>8.4.检查 MHA Manager 的状态：</p>
+<p>[root@mysql4 ~]# masterha_check_status –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf<br>app1 is stopped(2:NOT_RUNNING).<br>注意：如果正常，会显示”PING_OK” ，否则会显示”NOT_RUNNING”，这代表 MHA 监控没有开启。</p>
+<p>8.5   开启 MHA 服务<br>[root@ mysql4 ~]# nohup masterha_manager –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf  –remove_dead_master_conf  –ignore_last_failover &lt; &#x2F;dev&#x2F;null &gt;&#x2F;mha&#x2F;log&#x2F;mha.log 2&gt;&amp;1 &amp;<br>[1] 5855</p>
+<p>启动参数介绍：<br>–remove_dead_master_conf #该参数代表当发生主从切换后，老的主库的 IP 将会从配置文件中移除。<br>–mha_log            #日志存放位置<br>–ignore_last_failover      #在缺省情况下，如果 MHA 检测到连续发生宕机，且两次宕机间隔不足 8 小时的话，则不会进行 Failover ，之所以这样限制是为了避免 ping-pong效应。该参数代表 忽略上次 MHA 触发切换产生的文件，默认情况下，MHA 发生切换后会在日志目录，也就是上面我设置 的&#x2F;mha&#x2F;log产生 failover.complete 文件，下次再次切换的时候如果发现该目录下存在该文件将不允许触发切换，除非在第一次切换后收到删除该文件，为了方便，这里设置为–ignore_last_failover。</p>
+<p>查看 MHA Manager 监控是否正常：<br>[root@ mysql4 ~]# masterha_check_status –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf<br>app1 (pid:10890) is running(0:PING_OK), master:192.168.245.175<br>可以看见已经在监控了，而且 master 的主机为 192.168.245.175</p>
+<p>9.测试MHA故障<br>关闭mydql3数据库<br>[root@mysql3 opt]# systemctl stop mysqld</p>
+<p>由于MHA至少需要3台数据库，所以此时MHA关闭<br>[root@mysql4 conf]# masterha_check_status –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf<br>mha is stopped(2:NOT_RUNNING).</p>
+<p>[root@ mysql4 <del>]#grep -i “All other slaves should start” &#x2F;mha&#x2F;log&#x2F;mha.log<br>![file:&#x2F;&#x2F;c:\users\admini</del>1\appdata\local\temp\tmpl4ezg9\5.png](<a target="_blank" rel="noopener" href="https://s2.loli.net/2022/03/07/rHToZQKD6ECXqkd.png">https://s2.loli.net/2022/03/07/rHToZQKD6ECXqkd.png</a>)</p>
+<p> 从库mysql4：<br> mysql&gt; show slave status\G<br><img src="https://s2.loli.net/2022/03/07/fUtA1XnPlHhyVQb.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\6.png"></p>
+<p>重新启动mysql3数据库，执行主从同步操作<br><img src="https://s2.loli.net/2022/03/07/7eGmQcDrNvSEVgb.png" alt="file://c:\users\admini~1\appdata\local\temp\tmpl4ezg9\7.png"></p>
+<p>恢复好三台数据库后，需要重启MHA<br>vim &#x2F;mha&#x2F;conf&#x2F;mha.conf<br>[server  x ]<br>hostname&#x3D;产生故障的IP或主机名<br>port&#x3D;3306</p>
+<p>注：此时要检测三台机是否有主从关系</p>
+<p>[root@mysql4 conf]# nohup masterha_manager –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf  –remove_dead_master_conf  –ignore_last_failover &lt; &#x2F;dev&#x2F;null &gt;&#x2F;mha&#x2F;log&#x2F;mha.log 2&gt;&amp;1 &amp;<br>[1] 6095</p>
+<p>此时主库已切换成mysql5<br>[root@mysql4 conf]# masterha_check_status –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf<br>mha (pid:6095) is running(0:PING_OK), master:192.168.245.185</p>
+<h3 id="11-使用MHA自带的脚本master-ip-failover来实现VIP切换"><a href="#11-使用MHA自带的脚本master-ip-failover来实现VIP切换" class="headerlink" title="11.使用MHA自带的脚本master_ip_failover来实现VIP切换"></a>11.使用MHA自带的脚本master_ip_failover来实现VIP切换</h3><p>[root@mysql4 mha]# mkdir &#x2F;mha&#x2F;scripts<br>[root@mysql4 mha]# cd scripts<br>[root@mysql4 scripts]# vim master_ip_failover<br>往第34行添加以下配置<br>my $vip &#x3D;’192.168.245.180&#x2F;24’;       #空闲ip<br>my $key &#x3D;’1’;<br>my $ssh_start_vip &#x3D; “&#x2F;sbin&#x2F;ifconfig ens33:$key $vip”;<br>my $ssh_stop_vip &#x3D; “&#x2F;sbin&#x2F;ifconfig ens33:$key down”;</p>
+<p>11.1.解决中文字符：<br>[root@mysql4 ~]# dos2unix &#x2F;mha&#x2F;scripts&#x2F;master_ip_failover<br>给予执行权：<br>[root@mysql4 ~]# chmod a+x &#x2F;mha&#x2F;scripts&#x2F;master_ip_failover</p>
+<p>11.2.往管理节点里添加配置项：<br>vim &#x2F;mha&#x2F;conf&#x2F;mha.conf<br>master_ip_failover_script&#x3D;&#x2F;mha&#x2F;scripts&#x2F;master_ip_failover</p>
+<p>11.3.重启MHA：</p>
+<p>需要先关闭 MHA 服务<br>[root@mysql4 ~]# masterha_stop –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf</p>
+<p>再启动<br>[root@mysql4 ~]# nohup masterha_manager –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf  –remove_dead_master_conf  –ignore_last_failover &lt; &#x2F;dev&#x2F;null &gt;&#x2F;mha&#x2F;log&#x2F;mha.log 2&gt;&amp;1 &amp;</p>
+<p>验证：<br>主库能自动生成VIP，即为成功</p>
+<h3 id="12-MHA邮件报警"><a href="#12-MHA邮件报警" class="headerlink" title="12.MHA邮件报警"></a>12.MHA邮件报警</h3><p>[root@mysql4 scripts]# vim send_report</p>
+<p>给予执行权：<br>[root@mysql4 ~]# chmod a+x &#x2F;mha&#x2F;scripts&#x2F;send_report</p>
+<p>往管理节点里添加配置项：<br>vim &#x2F;mha&#x2F;conf&#x2F;mha.conf<br>report_script&#x3D;&#x2F;mha&#x2F;scripts&#x2F;send_report</p>
+<p>重启MHA：</p>
+<p>需要先关闭 MHA 服务<br>[root@mysql4 ~]# masterha_stop –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf</p>
+<p>再启动<br>[root@mysql4 ~]# nohup masterha_manager –conf&#x3D;&#x2F;mha&#x2F;conf&#x2F;mha.conf  –remove_dead_master_conf  –ignore_last_failover &lt; &#x2F;dev&#x2F;null &gt;&#x2F;mha&#x2F;log&#x2F;mha.log 2&gt;&amp;1 &amp;</p>
+<p>#!&#x2F;usr&#x2F;bin&#x2F;env perl</p>
+<p>use strict;<br>use warnings FATAL &#x3D;&gt; ‘all’;<br>use Email::Simple;<br>use Email::Sender::Simple qw(sendmail);<br>use Email::Sender::Transport::SMTP::TLS;<br>use Getopt::Long;</p>
+<p>#new_master_host and new_slave_hosts are set only when recovering master succeeded<br>my ( $dead_master_host, $new_master_host, $new_slave_hosts, $subject, $body );<br>my $smtp&#x3D;’smtp.163.com’;		#指定自己的邮箱smtp域名<br>my $mail_from&#x3D;’mail.shm.com’;		#指定 公司邮件服务器<br>my $mail_user&#x3D;‘<a href="mailto:&#x73;&#x68;&#109;&#49;&#x31;&#51;&#x36;&#x32;&#54;&#53;&#54;&#x33;&#54;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#x6f;&#109;">&#x73;&#x68;&#109;&#49;&#x31;&#51;&#x36;&#x32;&#54;&#53;&#54;&#x33;&#54;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#x6f;&#109;</a>‘;	#个人的邮箱<br>my $mail_pass&#x3D;’FCFXJUPZFTHHXCRK’;	#个人邮箱的 SMTP 密码<br>my $mail_to&#x3D;‘<a href="mailto:&#115;&#x68;&#109;&#49;&#x31;&#x33;&#54;&#50;&#54;&#53;&#x36;&#51;&#x36;&#x40;&#x31;&#54;&#51;&#x2e;&#x63;&#x6f;&#109;">&#115;&#x68;&#109;&#49;&#x31;&#x33;&#54;&#50;&#54;&#53;&#x36;&#51;&#x36;&#x40;&#x31;&#54;&#51;&#x2e;&#x63;&#x6f;&#109;</a>‘;	#个人的邮箱</p>
+<p>GetOptions(<br>  ‘orig_master_host&#x3D;s’ &#x3D;&gt; $dead_master_host,<br>  ‘new_master_host&#x3D;s’  &#x3D;&gt; $new_master_host,<br>  ‘new_slave_hosts&#x3D;s’  &#x3D;&gt; $new_slave_hosts,<br>  ‘subject&#x3D;s’          &#x3D;&gt; $subject,<br>  ‘body&#x3D;s’             &#x3D;&gt; $body,<br>);</p>
+<p>mailToContacts($smtp,$mail_from,$mail_user,$mail_pass,$mail_to,$subject,$body);<br>mailToContacts();<br>sub mailToContacts {<br>        my ( $smtp, $mail_from, $user, $passwd, $mail_to, $subject, $msg ) &#x3D; @_;<br>                open my $DEBUG, “&gt; &#x2F;var&#x2F;log&#x2F;masterha&#x2F;mhamail.log”<br>        or die “Can’t open the debug      file:$!\n”;<br>        my $transport &#x3D; Email::Sender::Transport::SMTP::TLS-&gt;new(<br>                host     &#x3D;&gt; ‘smtp.163.com’,		#指定邮箱 smtp 服务器<br>                port     &#x3D;&gt; 25,				#指定端口号(25，465)<br>                username &#x3D;&gt; ‘<a href="mailto:&#115;&#104;&#x6d;&#x31;&#49;&#51;&#x36;&#x32;&#x36;&#53;&#x36;&#51;&#54;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;">&#115;&#104;&#x6d;&#x31;&#49;&#51;&#x36;&#x32;&#x36;&#53;&#x36;&#51;&#54;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;</a>‘,	#指定个人邮箱账户<br>                password &#x3D;&gt; ‘FCFXJUPZFTHHXCRK’,		#指定个人邮箱 SMTP密码<br>                );</p>
+<p>​        my $message &#x3D; Email::Simple-&gt;create(<br>​    header &#x3D;&gt; [<br>​        From           &#x3D;&gt; ‘<a href="mailto:&#x73;&#x68;&#x6d;&#x31;&#49;&#x33;&#x36;&#50;&#x36;&#x35;&#54;&#51;&#x36;&#64;&#49;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;">&#x73;&#x68;&#x6d;&#x31;&#49;&#x33;&#x36;&#50;&#x36;&#x35;&#54;&#51;&#x36;&#64;&#49;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;</a>‘,	#实际环境指定 公司邮件服务器<br>​        To             &#x3D;&gt; ‘<a href="mailto:&#x73;&#104;&#x6d;&#x31;&#x31;&#x33;&#54;&#x32;&#x36;&#x35;&#54;&#x33;&#x36;&#x40;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#x6d;">&#x73;&#104;&#x6d;&#x31;&#x31;&#x33;&#54;&#x32;&#x36;&#x35;&#54;&#x33;&#x36;&#x40;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#x6d;</a>‘,	#指定 个人邮箱账户<br>​        Subject        &#x3D;&gt; ‘MHA-manager(192.168.168.4) 告警’	#指定邮件标题<br>​        ],<br>​        body           &#x3D;&gt;$body,				#可以自己书写邮件内容’…’<br>);<br>sendmail( $message, {transport &#x3D;&gt; $transport} );<br>​    return 1;<br>}<br># Do whatever you want here<br>exit 0;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/09/MySQL%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84-HMA%E6%9E%B6%E6%9E%84/" data-id="cl5dgqdvl000011wb9bk3bste" data-title="MySQL高可用集群架构-HMA架构" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
 
-验证
-五、镜像拉取与打标与docker操作一样
-需要其他镜像从第二大点的第二小点开始到最后
-</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/" title="nginx平滑升级"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nginx平滑升级"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/" title="nginx平滑升级">nginx平滑升级</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-07-05T23:30:14.000Z" title="Created 2022-07-06 07:30:14">2022-07-06</time></span></div><div class="content">实战10、nginx平滑升级方案一、依托web高可用架构，将流量从需要升级的节点，切换到其他节点执行，线下升级
-方案二、将 代理服务器的 版本 从 1.18 升级到 1.20，平滑&#x2F;在线 升级
-ps:旧版本程序需要先用绝对路径启动（因为可以调用系统变量）1、备份原始程序2、复制原始 编译参数  nginx -V3、编译  新程序到   make   阶段 （注意不要执行 make install ）4、拷贝新版程序到 当前 nginx 文件夹  替换到原始版本，需要加 -f 参数，否则报文件正忙
-[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src&#x2F;nginx-1.20.1]# cp -f  &#x2F;usr&#x2F;local&#x2F;src&#x2F;nginx-1.20.1&#x2F;objs&#x2F;nginx  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;
-cp -f  &#x2F;usr&#x2F;local&#x2F;src&#x2F;nginx-1.21.3 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/" title="LNMP基础脚本">LNMP基础脚本</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-07-03T03:05:47.000Z" title="Created 2022-07-03 11:05:47">2022-07-03</time></span></div><div class="content">注：MySQL、PHP、Nginx 的tar包皆放到&#x2F;opt下，根据需求修改目录、配置。
-#!&#x2F;bin&#x2F;bashwget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;epel.repo http://mirrors.aliyun.com/repo/epel-7.repoyum makecache
-useradd -r nginx -s &#x2F;bin&#x2F;falsecd &#x2F;opttar -zxvf nginx-1.20.2.tar.gz &amp;&amp; cd nginx-1.20.2yum -y install gcc gcc-c++ automake openssl openssl-devel make pcre-devel gd-devel libaio libaio-devel oniguruma-devel
-yum install autoconf gcc libxml2-devel openssl-devel curl-devel libjpeg-devel libpng-devel libXp ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/01/03/docker%E5%AE%89%E8%A3%85/" title="docker安装">docker安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-03T01:21:39.000Z" title="Created 2022-01-03 09:21:39">2022-01-03</time></span></div><div class="content">step 1: 安装必要的一些系统工具sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-Step 2: 添加软件源信息sudo yum-config-manager –add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-Step 3sudo sed -i ‘s+download.docker.com+mirrors.aliyun.com&#x2F;docker-ce+’ &#x2F;etc&#x2F;yum.repos.d&#x2F;docker-ce.repo
-Step 4: 更新并安装Docker-CEsudo yum makecache fastsudo yum -y install docker-ce
-Step 4: 开启Docker服务sudo service docker start
-注意：官方软件源默认启用了最新的软件，您可以通过编辑软件源的方式获取各个版本的软件包。例如官方并没有将测试版本的软件源 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2021/04/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="博客搭建">博客搭建</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-02T03:30:35.000Z" title="Created 2021-04-02 11:30:35">2021-04-02</time></span></div><div class="content">hexo博客搭建注：以下操作都根据 BiliBili 视频博主codesheep的hexo博客搭建视频进行操作。
-所用到的指令 
-hexo new “xxx”     创建一个新的文章
 
-文章标题可以在对应 md 文件里修改，新建时标题可以写的简单些。
+  
+    <article id="post-阿里云拉取海外镜像" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/08/%E9%98%BF%E9%87%8C%E4%BA%91%E6%8B%89%E5%8F%96%E6%B5%B7%E5%A4%96%E9%95%9C%E5%83%8F/" class="article-date">
+  <time class="dt-published" datetime="2022-07-08T03:24:40.000Z" itemprop="datePublished">2022-07-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/08/%E9%98%BF%E9%87%8C%E4%BA%91%E6%8B%89%E5%8F%96%E6%B5%B7%E5%A4%96%E9%95%9C%E5%83%8F/">阿里云拉取海外镜像</a>
+    </h1>
+  
 
-hexo g #生成网站静态文件到默认设置的 public 文件夹
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>此知识分享为好友苏师兄</p>
+<h2 id="阿里云镜像仓库拉取海外镜像"><a href="#阿里云镜像仓库拉取海外镜像" class="headerlink" title="阿里云镜像仓库拉取海外镜像"></a>阿里云镜像仓库拉取海外镜像</h2><h3 id="一、登陆阿里云与Code"><a href="#一、登陆阿里云与Code" class="headerlink" title="一、登陆阿里云与Code"></a>一、登陆阿里云与Code</h3><p><strong>主账号登录到阿里云上选择<code>容器镜像服务</code>，再新建窗口打开阿里云的<a target="_blank" rel="noopener" href="https://code.aliyun.com/">Code</a>平台，现在有新版与旧版；这里选择的是旧版。</strong></p>
+<h3 id="二、阿里云Code平台设置"><a href="#二、阿里云Code平台设置" class="headerlink" title="二、阿里云Code平台设置"></a>二、阿里云Code平台设置</h3><h4 id="1-首次登录需要设置私人令牌，通俗来说就是密码"><a href="#1-首次登录需要设置私人令牌，通俗来说就是密码" class="headerlink" title="1)首次登录需要设置私人令牌，通俗来说就是密码"></a>1)首次登录需要设置私人令牌，通俗来说就是密码</h4><p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261622818.png"></p>
+<h4 id="2-创建新项目"><a href="#2-创建新项目" class="headerlink" title="2)创建新项目"></a>2)创建新项目</h4><p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261629585.png"></p>
+<h3 id="三、开始构建"><a href="#三、开始构建" class="headerlink" title="三、开始构建"></a>三、开始构建</h3><h4 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1)新建一个文件"></a>1)新建一个文件</h4><p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261635024.png"></p>
+<h4 id="2-每一步创建或者更新等操作都需要提交信息"><a href="#2-每一步创建或者更新等操作都需要提交信息" class="headerlink" title="2)每一步创建或者更新等操作都需要提交信息"></a>2)每一步创建或者更新等操作都需要提交信息</h4><p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261637594.png"></p>
+<h4 id="3-构建拉取k8s-gcr-io-x2F-kube-apiserver-v1-22-10"><a href="#3-构建拉取k8s-gcr-io-x2F-kube-apiserver-v1-22-10" class="headerlink" title="3)构建拉取k8s.gcr.io&#x2F;kube-apiserver:v1.22.10"></a>3)构建拉取k8s.gcr.io&#x2F;kube-apiserver:v1.22.10</h4><p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261640636.png"></p>
+<p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261641866.png"></p>
+<p><strong>创建一个名为Dockerfile的文件</strong></p>
+<p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261642106.png"></p>
+<p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261644401.png"></p>
+<h3 id="四、容器镜像服务构建规则"><a href="#四、容器镜像服务构建规则" class="headerlink" title="四、容器镜像服务构建规则"></a>四、容器镜像服务构建规则</h3><p><strong>容器镜像服务 &#x3D;&#x3D;&gt; 实例列表 &#x3D;&#x3D;&gt; 镜像仓库</strong></p>
+<h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261651424.png"></p>
+<h4 id="绑定云Code账号"><a href="#绑定云Code账号" class="headerlink" title="绑定云Code账号"></a>绑定云Code账号</h4><p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261654575.png"></p>
+<h4 id="仓库绑定云Code"><a href="#仓库绑定云Code" class="headerlink" title="仓库绑定云Code"></a>仓库绑定云Code</h4><p><strong>重复创建仓库，进入这里；选择命名空间与云Code的项目</strong></p>
+<p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261656428.png"></p>
+<p><strong>等待创建仓库，创建规则</strong></p>
+<p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261701293.png"></p>
+<p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261703647.png"></p>
+<h4 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h4><p><img src="https://figure-bed-1304788733.cos.ap-guangzhou.myqcloud.com/typora/202205261704929.png"></p>
+<h3 id="五、镜像拉取与打标"><a href="#五、镜像拉取与打标" class="headerlink" title="五、镜像拉取与打标"></a>五、镜像拉取与打标</h3><p><strong>与docker操作一样</strong></p>
+<p><strong>需要其他镜像从第二大点的第二小点开始到最后</strong></p>
 
-便于查看网站生成的静态文件或者手动部署网站。
-如果使用自动部署，不需要先执行该命令。
-hexo g 是 hexo generate 的缩写，命令效果一样。
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/08/%E9%98%BF%E9%87%8C%E4%BA%91%E6%8B%89%E5%8F%96%E6%B5%B7%E5%A4%96%E9%95%9C%E5%83%8F/" data-id="cl5bwappp0000qhwbbey8gc2o" data-title="阿里云拉取海外镜像" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-hexo d #生成网站静态文件，并部署到指定仓库
 
-hexo d 时 hexo deploy 的缩写，命令效果一致。
 
-hexo s #启动博客
+  
+    <article id="post-nginx平滑升级" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/" class="article-date">
+  <time class="dt-published" datetime="2022-07-05T23:30:14.000Z" itemprop="datePublished">2022-07-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/">nginx平滑升级</a>
+    </h1>
+  
 
-hexo s 是 hexo server 的缩写，命令效果一致。
-预览的同时可以修改文章内容或主题代码，保存后刷新页面即可。
-对 Hexo 根目录 _config.yml 的修改，需要重启本地服务器后才能预览效果。
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>实战10、nginx平滑升级<br>方案一、依托web高可用架构，将流量从需要升级的节点，<br>切换到其他节点执行，线下升级</p>
+<p>方案二、<br>将 代理服务器的 版本 从 1.18 升级到 1.20，平滑&#x2F;在线 升级</p>
+<p>ps:旧版本程序需要先用绝对路径启动（因为可以调用系统变量）<br>1、备份原始程序<br>2、复制原始 编译参数  nginx -V<br>3、编译  新程序到   make   阶段 （注意不要执行 make install ）<br>4、拷贝新版程序到 当前 nginx 文件夹  替换到原始版本，需要加 -f 参数，否则报文件正忙</p>
+<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src&#x2F;nginx-1.20.1]# cp -f  &#x2F;usr&#x2F;local&#x2F;src&#x2F;nginx-1.20.1&#x2F;objs&#x2F;nginx  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;</p>
+<p>cp -f  &#x2F;usr&#x2F;local&#x2F;src&#x2F;nginx-1.21.3&#x2F;objs&#x2F;nginx  &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;<br>5、检查新版程序运行情况<br>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src&#x2F;nginx-1.20.1]# &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx -version<br>nginx version: nginx&#x2F;1.20.1</p>
+<p>6、kill  -USR2   旧版本的主进程号， 同时启动一个新程序的 Master进程，此时 新旧版本同时存在</p>
+<p>旧版本 nginx 的主进程将重命名它的 pid 文件为 .oldbin(例如：&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;nginx.pid.oldbin)，<br>然后执行新版本的 nginx 可执行程序，依次启动新的主进程和新的工作进程。 </p>
+<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# ps axu | grep  master<br>root       1036  0.0  0.4  45976  2088 ?        Ss   09:57   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx</p>
+<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# kill -USR2 1036</p>
+<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# ps axu | grep  master<br>root       1036  0.0  0.4  45976  2088 ?        Ss   09:57   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>root       3778  0.0  0.7  45936  3408 ?        S    10:58   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx</p>
+<p>7、 kill -WINCH  旧版本的主进程号<br>（让旧版本的 worker 进程完成已有请求，且不再接受新请求，新请求发给新进程）</p>
+<p>此时，新、旧版本的 nginx 实例会同时运行，共同处理输入的请求。<br>要逐步停止旧版本的 nginx 实例，你必须发送 WINCH 信号给旧的主进程，然后，它的工作进程就将开始从容关闭： </p>
+<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# ps axu | grep  nginx<br>root       1036  0.0  0.4  45976  2088 ?        Ss   09:57   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>nginx      1071  0.0  5.8  72600 28444 ?        S    10:23   0:00 nginx: worker process<br>root       3778  0.0  0.7  45936  3408 ?        S    10:58   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>nginx      3779  0.0  5.9  73072 28596 ?        S    10:58   0:00 nginx: worker process</p>
+<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# kill -WINCH 1036</p>
+<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# ps axu | grep  nginx<br>root       1036  0.0  0.4  45976  2088 ?        Ss   09:57   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>root       3778  0.0  0.7  45936  3408 ?        S    10:58   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>nginx      3779  0.0  5.9  73072 28596 ?        S    10:58   0:00 nginx: worker process</p>
+<p>一段时间后，旧的工作进程(worker process)处理了所有已连接的请求后退出，仅由新的工作进程来处理输入的请求了</p>
+<p>8、关闭旧的主进程   （关闭旧版本的 worker进程）<br>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# kill -QUIT 1036</p>
+<p>[root@proxy-48 &#x2F;usr&#x2F;local&#x2F;src]# ps axu | grep  nginx<br>root       3778  0.0  0.7  45936  3408 ?        S    10:58   0:00 nginx: master process &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>nginx      3779  0.0  5.9  73072 28848 ?        S    10:58   0:00 nginx: worker process</p>
+<p>总结：—————————————–</p>
+<p>1、备份老程序<br>2、重新编译 （旧参数+ 新的参数）<br>3、新程序  强制 覆盖 旧 nginx 程序  cp  -f<br>4、kill  -USR2  老进程<br>5、Kill  -WINCH  老进程<br>6、Kill  -QUIT  老进程</p>
+<p>● Nginx 的信号控制<br>•     TERM, INT 快速关闭<br>•     QUIT 从容关闭<br>•     HUP 平滑重启，重新加载配置文件<br>•     USR1 重新打开日志文件，在切割日志时用途较大<br>•     USR2 平滑升级可执行程序<br>•     WINCH 从容关闭工作进程</p>
+<p>第一步：查看当前Nginx版本信息<br>nginx -V<br>[root@localhost nginx-1.20.1]# nginx -V<br>nginx version: nginx&#x2F;1.20.1<br>built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC)<br>built with OpenSSL 1.0.2k-fips  26 Jan 2017<br>TLS SNI support enabled<br>configure arguments: –prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx –user&#x3D;nginx –group&#x3D;nginx –sbin-path&#x3D;&#x2F;usr&#x2F;sbin&#x2F;nginx –conf-path&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf –error-log-path&#x3D;&#x2F;var&#x2F;log&#x2F;nginx&#x2F;error.log –http-log-path&#x3D;&#x2F;var&#x2F;log&#x2F;nginx&#x2F;access.log –modules-path&#x3D;&#x2F;usr&#x2F;lib&#x2F;nginx&#x2F;modules –with-select_module –with-poll_module –with-threads –with-http_ssl_module –with-http_v2_module –with-http_realip_module –with-http_image_filter_module –with-http_sub_module –with-http_flv_module –with-http_gunzip_module –with-http_gzip_static_module –with-http_stub_status_module –with-stream<br>把这些模块复制，等下升级的版本预编译里面把这些复制进去。添加模块也可以自行在这基础上添加</p>
+<p>第二步：wget 要更新版本的安装包链接，下载下来解压</p>
+<p>第三步：进入新版本的解压包里面，执行.&#x2F;configure 模块 ，make<br>在编译的目录中执行如下命令，make upgrade<br>make完以后，不需要执行make install，否则会覆盖安装，nginx服务会出现各种问题<br>不中断nginx web服务器的正常运行称之为平滑升级，先重命名之前的nginx二进制文件<br>make完之后，会生成一个objs的包，里面有nginx的命令</p>
+<p>第四步：把nginx的命令备份一下，在备份前，先把当前版本的nginx启动起来<br>&#x2F;usr&#x2F;sbin&#x2F;nginx<br>mv &#x2F;usr&#x2F;sbin&#x2F;nginx &#x2F;usr&#x2F;sbin&#x2F;nginx.bak</p>
+<p>把新版本的包里面的objs包里的命令复制到&#x2F;usr&#x2F;sbin&#x2F;nginx（这个目录只是我们设置的，如果你的启动文件不放在这里也是可以的）<br>拷贝新版程序到 当前 nginx 文件夹  替换到原始版本，需要加 -f 参数，否则报文件<br>cp -f objs&#x2F;nginx &#x2F;usr&#x2F;sbin&#x2F;nginx</p>
+<p>第五步：kill  -USR2   旧版本的主进程号， 同时启动一个新程序的 Master进程，此时 新旧版本同时存在旧版本 nginx 的主进程将重命名它的 pid 文件为 .oldbin<br>(例如：&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;nginx.pid.oldbin)，然后执行新版本的 nginx 可执行程序，依次启动新的主进程和新的工作进程。 </p>
+<p>第六步：kill -WINCH  旧版本的主进程号（让旧版本的 worker 进程完成已有请求，且不再接受新请求，新请求发给新进程）</p>
+<p>第七步：一段时间后，旧的工作进程(worker process)处理了所有已连接的请求后退出，仅由新的工作进程来处理输入的请求了<br>等待旧工作进程结束后再结束旧的主进程，完成此次升级<br>kill -QUIT 旧主进程号</p>
 
-hexo clean #清楚缓存文件 db.json 和已生成的静态文件 public 。
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/" data-id="cl58t1m2b0000o8wbh8zj3p6r" data-title="nginx平滑升级" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-网站显示异常时可以执行这条命令试试。
 
-hexo ne ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2021/04/02/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-02T02:01:35.000Z" title="Created 2021-04-02 10:01:35">2021-04-02</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
 
-More info: Writing
-Run server1$ hexo server
+  
+    <article id="post-LNMP基础脚本" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/" class="article-date">
+  <time class="dt-published" datetime="2022-07-03T03:05:47.000Z" itemprop="datePublished">2022-07-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/">LNMP基础脚本</a>
+    </h1>
+  
 
-More info: Server
-Generate static files1$ hexo generate
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>注：MySQL、PHP、Nginx 的tar包皆放到&#x2F;opt下，根据需求修改目录、配置。</p>
+<p>#!&#x2F;bin&#x2F;bash<br>wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;epel.repo <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/repo/epel-7.repo">http://mirrors.aliyun.com/repo/epel-7.repo</a><br>yum makecache</p>
+<p>useradd -r nginx -s &#x2F;bin&#x2F;false<br>cd &#x2F;opt<br>tar -zxvf nginx-1.20.2.tar.gz &amp;&amp; cd nginx-1.20.2<br>yum -y install gcc gcc-c++ automake openssl openssl-devel make pcre-devel gd-devel libaio libaio-devel oniguruma-devel</p>
+<p>yum install autoconf gcc libxml2-devel openssl-devel curl-devel libjpeg-devel libpng-devel libXpm-devel -y </p>
+<p>yum install freetype-devel libmcrypt-devel make ImageMagick-devel libssh2-devel gcc-c++ cyrus-sasl-devel  sqlite-devel -y</p>
+<p>.&#x2F;configure –prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx –user&#x3D;nginx  –group&#x3D;nginx –sbin-path&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;nginx –conf-path&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf –error-log-path&#x3D;&#x2F;var&#x2F;log&#x2F;nginx&#x2F;nginx.log –http-log-path&#x3D;&#x2F;var&#x2F;log&#x2F;nginx&#x2F;access.log –modules-path&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;modules –with-select_module –with-poll_module –with-threads  –with-http_ssl_module –with-http_v2_module  –with-http_realip_module –with-http_image_filter_module –with-http_sub_module –with-http_flv_module –with-http_gunzip_module –with-http_gzip_static_module  –with-http_stub_status_module –with-stream</p>
+<p>make &amp;&amp; make install</p>
+<p>ln -s &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;nginx &#x2F;usr&#x2F;sbin&#x2F;nginx<br>nginx</p>
+<p>cd &#x2F;opt</p>
+<p>tar -zxvf php-7.4.28.tar.gz<br>cd php-7.4.28<br>.&#x2F;configure <br>–prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;php <br>–with-config-file-path&#x3D;&#x2F;usr&#x2F;local&#x2F;php&#x2F;etc <br>–with-config-file-scan-dir&#x3D;&#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php.d <br>–disable-ipv6 <br>–enable-bcmath <br>–enable-calendar <br>–enable-exif <br>–enable-fpm <br>–with-fpm-user&#x3D;www <br>–with-fpm-group&#x3D;www <br>–enable-ftp <br>–enable-gd-jis-conv <br>–enable-gd-native-ttf <br>–enable-inline-optimization <br>–enable-mbregex <br>–enable-mbstring <br>–enable-mysqlnd <br>–enable-opcache <br>–enable-pcntl <br>–enable-shmop <br>–enable-soap <br>–enable-sockets <br>–enable-static <br>–enable-sysvsem <br>–enable-wddx <br>–enable-xml <br>–with-curl <br>–with-gd <br>–with-jpeg-dir <br>–with-freetype-dir <br>–with-xpm-dir <br>–with-png-dir <br>–with-gettext <br>–with-iconv <br>–with-libxml-dir <br>–with-mcrypt <br>–with-mhash <br>–with-mysqli <br>–with-pdo-mysql <br>–with-pear <br>–with-openssl <br>–with-xmlrpc <br>–with-zlib <br>–disable-debug <br>–disable-phpdbg </p>
+<p>make &amp;&amp; make install</p>
+<p>cp &#x2F;opt&#x2F;php-7.4.28&#x2F;sapi&#x2F;fpm&#x2F;init.d.php-fpm  &#x2F;usr&#x2F;local&#x2F;php&#x2F;php-fpm</p>
+<p>chmod a+x &#x2F;usr&#x2F;local&#x2F;php&#x2F;php-fpm</p>
+<p>cp &#x2F;opt&#x2F;php-7.4.28&#x2F;php.ini-development  &#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php.ini</p>
+<p>cp &#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php-fpm.conf.default  &#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php-fpm.conf</p>
+<p>cp &#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php-fpm.d&#x2F;<a target="_blank" rel="noopener" href="http://www.conf.default/">www.conf.default</a>   &#x2F;usr&#x2F;local&#x2F;php&#x2F;etc&#x2F;php-fpm.d&#x2F;<a target="_blank" rel="noopener" href="http://www.conf/">www.conf</a></p>
+<p>useradd www -s &#x2F;sbin&#x2F;nologin</p>
+<p>&#x2F;usr&#x2F;local&#x2F;php&#x2F;php-fpm start</p>
+<p>cd &#x2F;opt</p>
+<p>yum -y remove mariadb*</p>
+<p>tar -zxvf mysql-5.7.30-linux-glibc2.12-x86_64.tar.gz -C &#x2F;usr&#x2F;local&#x2F;</p>
+<p>cd &#x2F;usr&#x2F;local&#x2F;</p>
+<p>mv mysql-5.7.30-linux-glibc2.12-x86_64 mysql</p>
+<p>cd &#x2F;usr&#x2F;local&#x2F;mysql</p>
+<p>useradd mysql -s &#x2F;sbin&#x2F;nologin</p>
+<p>mkdir -p &#x2F;data&#x2F;mysql</p>
+<p>mkdir -p &#x2F;var&#x2F;log&#x2F;mysql</p>
+<p>chown mysql:mysql -R &#x2F;usr&#x2F;local&#x2F;mysql  &#x2F;data&#x2F;mysql  &#x2F;var&#x2F;log&#x2F;mysql</p>
+<p>echo “export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin” &gt;&gt;&#x2F;etc&#x2F;profile &amp;&amp; source &#x2F;etc&#x2F;profile</p>
+<p>cat &gt; &#x2F;etc&#x2F;my.cnf &lt;&lt; EOF<br>[mysqld]<br>user&#x3D;mysql<br>basedir&#x3D;&#x2F;usr&#x2F;local&#x2F;mysql<br>datadir&#x3D;&#x2F;data&#x2F;mysql<br>server_id&#x3D;1<br>port&#x3D;3306<br>socket&#x3D;&#x2F;data&#x2F;mysql&#x2F;mysql.sock</p>
+<p>[mysql]<br>socket&#x3D;&#x2F;data&#x2F;mysql&#x2F;mysql.sock </p>
+<p>[mysqld_safe]<br>log-error&#x3D;&#x2F;var&#x2F;log&#x2F;mysql&#x2F;error.log<br>pid-file&#x3D;&#x2F;data&#x2F;mysql&#x2F;mysql.pid<br>EOF</p>
+<p>cp &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;support-files&#x2F;mysql.server &#x2F;etc&#x2F;init.d&#x2F;mysqld</p>
+<p>chmod +x &#x2F;etc&#x2F;init.d&#x2F;mysqld</p>
+<p>chkconfig –add mysqld</p>
+<p>mysqld –initialize-insecure  –user&#x3D;mysql –basedir&#x3D;&#x2F;usr&#x2F;local&#x2F;mysql –datadir&#x3D;&#x2F;data&#x2F;mysql</p>
+<p>systemctl start mysqld</p>
+<p>mysql -uroot  -S &#x2F;data&#x2F;mysql&#x2F;mysql.sock</p>
 
-More info: Generating
-Deploy to remote sites1$ hexo deploy
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/" data-id="cl54qh2ma00009kwb5ktmb5k4" data-title="LNMP基础脚本" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-More info: Deployment
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/07/09/%E4%BD%BF%E7%94%A8atlas%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/" title="使用atlas实现mysql主从读写分离"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用atlas实现mysql主从读写分离"/></a><div class="content"><a class="title" href="/2022/07/09/%E4%BD%BF%E7%94%A8atlas%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/" title="使用atlas实现mysql主从读写分离">使用atlas实现mysql主从读写分离</a><time datetime="2022-07-09T09:52:40.000Z" title="Created 2022-07-09 17:52:40">2022-07-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/09/MySQL%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84-HMA%E6%9E%B6%E6%9E%84/" title="MySQL高可用集群架构-HMA架构"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL高可用集群架构-HMA架构"/></a><div class="content"><a class="title" href="/2022/07/09/MySQL%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84-HMA%E6%9E%B6%E6%9E%84/" title="MySQL高可用集群架构-HMA架构">MySQL高可用集群架构-HMA架构</a><time datetime="2022-07-09T05:44:41.000Z" title="Created 2022-07-09 13:44:41">2022-07-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/08/%E9%98%BF%E9%87%8C%E4%BA%91%E6%8B%89%E5%8F%96%E6%B5%B7%E5%A4%96%E9%95%9C%E5%83%8F/" title="阿里云拉取海外镜像"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="阿里云拉取海外镜像"/></a><div class="content"><a class="title" href="/2022/07/08/%E9%98%BF%E9%87%8C%E4%BA%91%E6%8B%89%E5%8F%96%E6%B5%B7%E5%A4%96%E9%95%9C%E5%83%8F/" title="阿里云拉取海外镜像">阿里云拉取海外镜像</a><time datetime="2022-07-08T03:24:40.000Z" title="Created 2022-07-08 11:24:40">2022-07-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/" title="nginx平滑升级"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nginx平滑升级"/></a><div class="content"><a class="title" href="/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/" title="nginx平滑升级">nginx平滑升级</a><time datetime="2022-07-05T23:30:14.000Z" title="Created 2022-07-06 07:30:14">2022-07-06</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/" title="LNMP基础脚本">LNMP基础脚本</a><time datetime="2022-07-03T03:05:47.000Z" title="Created 2022-07-03 11:05:47">2022-07-03</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">July 2022</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">January 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">April 2021</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-07-10T07:05:56.565Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+
+  
+    <article id="post-docker安装" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/01/03/docker%E5%AE%89%E8%A3%85/" class="article-date">
+  <time class="dt-published" datetime="2022-01-03T01:21:39.000Z" itemprop="datePublished">2022-01-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/01/03/docker%E5%AE%89%E8%A3%85/">docker安装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="step-1-安装必要的一些系统工具"><a href="#step-1-安装必要的一些系统工具" class="headerlink" title="step 1: 安装必要的一些系统工具"></a>step 1: 安装必要的一些系统工具</h1><p>sudo yum install -y yum-utils device-mapper-persistent-data lvm2</p>
+<h1 id="Step-2-添加软件源信息"><a href="#Step-2-添加软件源信息" class="headerlink" title="Step 2: 添加软件源信息"></a>Step 2: 添加软件源信息</h1><p>sudo yum-config-manager –add-repo <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo">https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</a></p>
+<h1 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h1><p>sudo sed -i ‘s+download.docker.com+mirrors.aliyun.com&#x2F;docker-ce+’ &#x2F;etc&#x2F;yum.repos.d&#x2F;docker-ce.repo</p>
+<h1 id="Step-4-更新并安装Docker-CE"><a href="#Step-4-更新并安装Docker-CE" class="headerlink" title="Step 4: 更新并安装Docker-CE"></a>Step 4: 更新并安装Docker-CE</h1><p>sudo yum makecache fast<br>sudo yum -y install docker-ce</p>
+<h1 id="Step-4-开启Docker服务"><a href="#Step-4-开启Docker服务" class="headerlink" title="Step 4: 开启Docker服务"></a>Step 4: 开启Docker服务</h1><p>sudo service docker start</p>
+<h1 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h1><h1 id="官方软件源默认启用了最新的软件，您可以通过编辑软件源的方式获取各个版本的软件包。例如官方并没有将测试版本的软件源置为可用，您可以通过以下方式开启。同理可以开启各种测试版本等。"><a href="#官方软件源默认启用了最新的软件，您可以通过编辑软件源的方式获取各个版本的软件包。例如官方并没有将测试版本的软件源置为可用，您可以通过以下方式开启。同理可以开启各种测试版本等。" class="headerlink" title="官方软件源默认启用了最新的软件，您可以通过编辑软件源的方式获取各个版本的软件包。例如官方并没有将测试版本的软件源置为可用，您可以通过以下方式开启。同理可以开启各种测试版本等。"></a>官方软件源默认启用了最新的软件，您可以通过编辑软件源的方式获取各个版本的软件包。例如官方并没有将测试版本的软件源置为可用，您可以通过以下方式开启。同理可以开启各种测试版本等。</h1><h1 id="vim-x2F-etc-x2F-yum-repos-d-x2F-docker-ce-repo"><a href="#vim-x2F-etc-x2F-yum-repos-d-x2F-docker-ce-repo" class="headerlink" title="vim &#x2F;etc&#x2F;yum.repos.d&#x2F;docker-ce.repo"></a>vim &#x2F;etc&#x2F;yum.repos.d&#x2F;docker-ce.repo</h1><h1 id="将-docker-ce-test-下方的enabled-x3D-0修改为enabled-x3D-1"><a href="#将-docker-ce-test-下方的enabled-x3D-0修改为enabled-x3D-1" class="headerlink" title="将[docker-ce-test]下方的enabled&#x3D;0修改为enabled&#x3D;1"></a>将[docker-ce-test]下方的enabled&#x3D;0修改为enabled&#x3D;1</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="安装指定版本的Docker-CE"><a href="#安装指定版本的Docker-CE" class="headerlink" title="安装指定版本的Docker-CE:"></a>安装指定版本的Docker-CE:</h1><h1 id="Step-1-查找Docker-CE的版本"><a href="#Step-1-查找Docker-CE的版本" class="headerlink" title="Step 1: 查找Docker-CE的版本:"></a>Step 1: 查找Docker-CE的版本:</h1><h1 id="yum-list-docker-ce-x86-64-–showduplicates-sort-r"><a href="#yum-list-docker-ce-x86-64-–showduplicates-sort-r" class="headerlink" title="yum list docker-ce.x86_64 –showduplicates | sort -r"></a>yum list docker-ce.x86_64 –showduplicates | sort -r</h1><h1 id="Loading-mirror-speeds-from-cached-hostfile"><a href="#Loading-mirror-speeds-from-cached-hostfile" class="headerlink" title="Loading mirror speeds from cached hostfile"></a>Loading mirror speeds from cached hostfile</h1><h1 id="Loaded-plugins-branch-fastestmirror-langpacks"><a href="#Loaded-plugins-branch-fastestmirror-langpacks" class="headerlink" title="Loaded plugins: branch, fastestmirror, langpacks"></a>Loaded plugins: branch, fastestmirror, langpacks</h1><h1 id="docker-ce-x86-64-17-03-1-ce-1-el7-centos-docker-ce-stable"><a href="#docker-ce-x86-64-17-03-1-ce-1-el7-centos-docker-ce-stable" class="headerlink" title="docker-ce.x86_64            17.03.1.ce-1.el7.centos            docker-ce-stable"></a>docker-ce.x86_64            17.03.1.ce-1.el7.centos            docker-ce-stable</h1><h1 id="docker-ce-x86-64-17-03-1-ce-1-el7-centos-docker-ce-stable-1"><a href="#docker-ce-x86-64-17-03-1-ce-1-el7-centos-docker-ce-stable-1" class="headerlink" title="docker-ce.x86_64            17.03.1.ce-1.el7.centos            @docker-ce-stable"></a>docker-ce.x86_64            17.03.1.ce-1.el7.centos            @docker-ce-stable</h1><h1 id="docker-ce-x86-64-17-03-0-ce-1-el7-centos-docker-ce-stable"><a href="#docker-ce-x86-64-17-03-0-ce-1-el7-centos-docker-ce-stable" class="headerlink" title="docker-ce.x86_64            17.03.0.ce-1.el7.centos            docker-ce-stable"></a>docker-ce.x86_64            17.03.0.ce-1.el7.centos            docker-ce-stable</h1><h1 id="Available-Packages"><a href="#Available-Packages" class="headerlink" title="Available Packages"></a>Available Packages</h1><h1 id="Step2-安装指定版本的Docker-CE-VERSION例如上面的17-03-0-ce-1-1-el7-centos"><a href="#Step2-安装指定版本的Docker-CE-VERSION例如上面的17-03-0-ce-1-1-el7-centos" class="headerlink" title="Step2: 安装指定版本的Docker-CE: (VERSION例如上面的17.03.0.ce.1-1.el7.centos)"></a>Step2: 安装指定版本的Docker-CE: (VERSION例如上面的17.03.0.ce.1-1.el7.centos)</h1><h1 id="sudo-yum-y-install-docker-ce-VERSION"><a href="#sudo-yum-y-install-docker-ce-VERSION" class="headerlink" title="sudo yum -y install docker-ce-[VERSION]"></a>sudo yum -y install docker-ce-[VERSION]</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/01/03/docker%E5%AE%89%E8%A3%85/" data-id="cl56w3yfa00002xwbbue6dxts" data-title="docker安装" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-博客搭建" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="article-date">
+  <time class="dt-published" datetime="2021-04-02T03:30:35.000Z" itemprop="datePublished">2021-04-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="hexo博客搭建"><a href="#hexo博客搭建" class="headerlink" title="hexo博客搭建"></a>hexo博客搭建</h3><p><strong>注：以下操作都根据 BiliBili 视频博主codesheep的hexo博客搭建视频进行操作。</strong></p>
+<p>所用到的指令 </p>
+<p>hexo new “xxx”     创建一个新的文章</p>
+<ul>
+<li>文章标题可以在对应 md 文件里修改，新建时标题可以写的简单些。</li>
+</ul>
+<p>hexo g #生成网站静态文件到默认设置的 public 文件夹</p>
+<ul>
+<li>便于查看网站生成的静态文件或者手动部署网站。</li>
+<li>如果使用自动部署，不需要先执行该命令。</li>
+<li>hexo g 是 hexo generate 的缩写，命令效果一样。</li>
+</ul>
+<p>hexo d #生成网站静态文件，并部署到指定仓库</p>
+<ul>
+<li>hexo d 时 hexo deploy 的缩写，命令效果一致。</li>
+</ul>
+<p>hexo s #启动博客</p>
+<ul>
+<li>hexo s 是 hexo server 的缩写，命令效果一致。</li>
+<li>预览的同时可以修改文章内容或主题代码，保存后刷新页面即可。</li>
+<li>对 Hexo 根目录 _config.yml 的修改，需要重启本地服务器后才能预览效果。</li>
+</ul>
+<p>hexo clean #清楚缓存文件 db.json 和已生成的静态文件 public 。</p>
+<ul>
+<li>网站显示异常时可以执行这条命令试试。</li>
+</ul>
+<p>hexo new page xxx #新建一个标题为 xxx 的页面，默认链接地址为 主页地址&#x2F;xxx&#x2F;  例如：ip&#x2F;aboutme&#x2F;</p>
+<ul>
+<li>标题可以为中文，但一般习惯用英文。</li>
+<li>页面标题和文章一样可以随意修改。</li>
+<li>页面不会出现在首页文章列表和归档中，夜不支持设置分类标签。</li>
+</ul>
+<ol>
+<li>下载node.js 官网下载npm包</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v #查看是否安装成功，查看版本号</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li>下载淘宝镜像，加速下载。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">cnpm -v #查看是否安装成功，查看版本号</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li>下载hexo</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm hexo install -g hexo-cli</span><br><span class="line">hexo -v #查看hexo框架。</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="4">
+<li>创建一个空目录，用来作博客文件夹（目录），当操作失误修改无果，直接删掉就行。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /blog    #根据视频演示，创建Blog文件夹，文件夹名可自行修改。</span><br><span class="line">cd /blog  #进入blog文件夹</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="5">
+<li>hexo初始化，如果有梯子建议用梯子进行下载，速度会快一点，无梯子则需要等待一会。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">hexo init             #安装hexo的各种所需要的文件。</span><br><span class="line"></span><br><span class="line">#会显示如下：</span><br><span class="line">#INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git</span><br><span class="line">#INFO  Install dependencies</span><br><span class="line">#INFO  Start blogging with Hexo!</span><br><span class="line"></span><br><span class="line">[root@docker-lnmp blog]# ls -l</span><br><span class="line">总用量 180</span><br><span class="line">-rw-r--r--.   1 root root      0 7月   2 11:21 _config.landscape.yml</span><br><span class="line">-rw-r--r--.   1 root root   2441 7月   2 11:21 _config.yml</span><br><span class="line">drwxr-xr-x. 220 root root   8192 7月   2 11:21 node_modules</span><br><span class="line">-rw-r--r--.   1 root root    615 7月   2 11:21 package.json</span><br><span class="line">-rw-r--r--.   1 root root 163482 7月   2 11:21 package-lock.json</span><br><span class="line">drwxr-xr-x.   2 root root     52 7月   2 11:21 scaffolds</span><br><span class="line">drwxr-xr-x.   3 root root     20 7月   2 11:21 source</span><br><span class="line">drwxr-xr-x.   2 root root     22 7月   2 11:21 themes</span><br><span class="line"></span><br><span class="line">#安装完成</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="6">
+<li>启动hexo</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@docker-lnmp blog]# hexo s</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+
+<p>#在网页输入：localhost:4000 或 虚拟机Ip：xxx.xxx.xxx.xxx:4000 即可。</p>
+<ol start="7">
+<li>写博客</li>
+</ol>
+<p>先使用ctrl + C 把博客进程终止，然后使用hexo n “xxx”  #xxx是输入博客的题目。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@docker-lnmp blog]# hexo n &quot;博客搭建&quot;</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: /xxx/xxx/_posts/博客搭建.md</span><br><span class="line"></span><br><span class="line">cd /xxx/xxx/_posts/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ls -l</span><br><span class="line"></span><br><span class="line">-rw-r--r--. 1 root root  838 7月   2 11:21 hello-world.md</span><br><span class="line">-rw-r--r--. 1 root root 1885 7月   2 11:32 博客搭建.md</span><br><span class="line"></span><br><span class="line">vim xxxx.md     #编写博客，写完保存并退出。</span><br><span class="line"></span><br><span class="line">cd ../..    #退出到hexo文件那。</span><br><span class="line"></span><br><span class="line">hexo s  #开启hexo程序，进入网址，就更新了。</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>挂到github上，</li>
+</ol>
+<p>（1）先登录github，在头像那点 your repositories。</p>
+<p>（2）点一下绿色按钮的 New ，创建一个 repositories 。注意：你的 Repository name 要与你的用户名相同，这样就可以输入你的 用户名.github.io 登录了。</p>
+<p>（3）创建完后先放着，回到虚拟机，下载hexo-deployer-git插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>   (4)   配置_config.yml文件，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">[root@docker-lnmp blog]# vim _config.yml</span><br><span class="line"></span><br><span class="line">#最底层</span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:xxx/xxx.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  </span><br><span class="line">#保存退出</span><br><span class="line"></span><br><span class="line">[root@docker-lnmp blog]# hexo d  会让你输入用户和密码</span><br><span class="line">······</span><br><span class="line">Username for ’htpps://github.com‘: xxx     #输入你github的用户名</span><br><span class="line">Password for &#x27;https://xxx@github.com&#x27;:     #输入你github登录密码</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">INFO  Copying files from extend dirs...</span><br><span class="line"># 位于分支 master</span><br><span class="line">无文件要提交，干净的工作区</span><br><span class="line">Counting objects: 36, done.</span><br><span class="line">Delta compression using up to 2 threads.</span><br><span class="line">Compressing objects: 100% (28/28), done.</span><br><span class="line">Writing objects: 100% (36/36), 883.95 KiB | 0 bytes/s, done.</span><br><span class="line">Total 36 (delta 5), reused 0 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (5/5), done.</span><br><span class="line">To git@github.com:ThunderHud/ThunderHud.github.io.git</span><br><span class="line"> * [new branch]      HEAD -&gt; master</span><br><span class="line">分支 master 设置为跟踪来自 git@github.com:ThunderHud/ThunderHud.github.io.git 的远程分支 master。</span><br><span class="line">INFO  Deploy done: git</span><br><span class="line"></span><br><span class="line">推送成功后，你GitHub的repositories会出现很多一些文件，然后在新的网页输入xxx.github.io就可以了，第一次会出现页面不存在的情况，再刷新一次就可以了。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>更换博客主题</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#可在网址输入：https://github.com/litten/hexo-theme-yilia   </span><br><span class="line">#可以在github上搜索其他的hexo主题</span><br><span class="line"></span><br><span class="line">[root@docker-lnmp blog]# git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br><span class="line"></span><br><span class="line">[root@docker-lnmp blog]# vim _config.yml</span><br><span class="line">#修改theme配置</span><br><span class="line"></span><br><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: yilia         #将 landscape 修改未yilia</span><br><span class="line"></span><br><span class="line">#:Wq保存并退出</span><br><span class="line"></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">hexo s</span><br><span class="line">#更换主题时会比较慢，一会就会更换主题了</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" data-id="cl5446qfm00012nwbdennfqno" data-title="博客搭建" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/02/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2021-04-02T02:01:35.000Z" itemprop="datePublished">2021-04-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/02/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/02/hello-world/" data-id="cl5446qfh00002nwbhqri4gjx" data-title="Hello World" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/07/09/%E4%BD%BF%E7%94%A8atlas%E5%AE%9E%E7%8E%B0mysql%E4%B8%BB%E4%BB%8E%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/">使用atlas实现mysql主从读写分离</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/09/MySQL%E9%AB%98%E5%8F%AF%E7%94%A8%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84-HMA%E6%9E%B6%E6%9E%84/">MySQL高可用集群架构-HMA架构</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/08/%E9%98%BF%E9%87%8C%E4%BA%91%E6%8B%89%E5%8F%96%E6%B5%B7%E5%A4%96%E9%95%9C%E5%83%8F/">阿里云拉取海外镜像</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/06/nginx%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7/">nginx平滑升级</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/03/LNMP%E5%9F%BA%E7%A1%80%E8%84%9A%E6%9C%AC/">LNMP基础脚本</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
